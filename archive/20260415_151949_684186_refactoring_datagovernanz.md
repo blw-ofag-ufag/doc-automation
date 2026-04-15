@@ -149,10 +149,10 @@ Keine
 - Meetings vorbereiten und dokumentieren
 - Enabling der 👩‍💼💡 Datenverwalter (Data Stewards)
 
-### 3.3 Datenschutzbeauftragter 👤⚖️
+### 3.3 Datenschutzberater 👤⚖️
 
 #### Kurzbeschreibung
-Der Datenschutzbeauftragter 👤 ⚖️ stellt die Einhaltung rechtlichen Vorgaben bei der Bearbeitung von Personendaten sicher.
+Der Datenschutzberater 👤 ⚖️ stellt die Einhaltung rechtlichen Vorgaben bei der Bearbeitung von Personendaten sicher.
 
 #### Aufgaben
 - Prüft die Bearbeitung von Personendaten und empfiehlt Korrekturmassnahmen

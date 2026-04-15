@@ -142,8 +142,8 @@ terms:
     accountability: Plant eine skalierbare und sichere Datenarchitektur, die den Anforderungen des BLW entspricht. Stellt sicher, dass Daten konsistent, verfügbar und qualitativ hochwertig sind sowie den geltenden Datenschutz- und Compliance-Vorgaben entsprechen.
 
   complianceOfficer:
-    label: Datenschutzberater 👤⚖️
-    description: Der Datenschutzberater 👤 ⚖️ stellt die Einhaltung rechtlichen Vorgaben bei der Bearbeitung von Personendaten sicher. 
+    label: Datenschutzbeauftragter 👤⚖️
+    description: Der Datenschutzbeauftragter 👤 ⚖️ stellt die Einhaltung rechtlichen Vorgaben bei der Bearbeitung von Personendaten sicher. 
     responsibility:
     - Prüft die Bearbeitung von Personendaten und empfiehlt Korrekturmassnahmen
     - Anlaufstelle bei Datenschutzfragen

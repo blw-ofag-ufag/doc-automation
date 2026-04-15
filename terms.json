@@ -172,8 +172,8 @@
       "accountability": "Plant eine skalierbare und sichere Datenarchitektur, die den Anforderungen des BLW entspricht. Stellt sicher, dass Daten konsistent, verf\u00fcgbar und qualitativ hochwertig sind sowie den geltenden Datenschutz- und Compliance-Vorgaben entsprechen."
     },
     "complianceOfficer": {
-      "label": "Datenschutzberater \ud83d\udc64\u2696\ufe0f",
-      "description": "Der Datenschutzberater \ud83d\udc64 \u2696\ufe0f stellt die Einhaltung rechtlichen Vorgaben bei der Bearbeitung von Personendaten sicher.",
+      "label": "Datenschutzbeauftragter \ud83d\udc64\u2696\ufe0f",
+      "description": "Der Datenschutzbeauftragter \ud83d\udc64 \u2696\ufe0f stellt die Einhaltung rechtlichen Vorgaben bei der Bearbeitung von Personendaten sicher.",
       "responsibility": [
         "Pr\u00fcft die Bearbeitung von Personendaten und empfiehlt Korrekturmassnahmen",
         "Anlaufstelle bei Datenschutzfragen",

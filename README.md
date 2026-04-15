@@ -62,7 +62,7 @@ The glossary is defined in YAML:
 Each term should include:
 
 - label → display name used in documentation
-- definition → description of the concept
+- description → description of the concept
 
 ---
 
@@ -193,7 +193,7 @@ Before building, the system validates `terms.yaml`.
 Required:
 
 - label (string)
-- definition (string)
+- description (string)
 
 Failures:
 - missing terms root key

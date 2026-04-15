@@ -112,7 +112,7 @@
 
     <!-- DATA LEAD -->
     <rect x="700" y="820" width="400" height="140" class="ext"/>
-    <text x="900" y="850" text-anchor="middle" class="title">Data Management Lead 👤🧭</text>
+    <text x="900" y="850" text-anchor="middle" class="title">{'label': 'Data Management Lead 👤🧭', 'description': 'Kompetenzstelle Daten und operative “Geschäftsstelle” für das DGD.', 'responsibility': ['Operative Koordination der Data Governance', 'Vorbereitung von Entscheidungen DGD', 'Tracking der Reifegradentwicklung'], 'authority': 'Keine', 'accountability': ['Meetings vorbereiten und dokumentieren', 'Enabling der 👩\u200d💼💡 Datenverwalter (Data Stewards)'], 'aliases': 'Data Management Specialist 👤⚙️'}</text>
     <text x="800" y="875" class="small">
         <tspan x="730">• Koordination Governance</tspan>
         <tspan x="730" dy="15">• Unterstützung 👩‍💼💡 Datenverwalter (Data Steward)</tspan>

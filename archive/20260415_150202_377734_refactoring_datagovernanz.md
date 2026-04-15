@@ -2,7 +2,7 @@
 
 - Daten sind eine strategische Ressource des BLW
 - Drei Rollen reichen als Fundament:
-  - 🧑‍✈️🧭 Dateneigner (Data Owner). Fokus: Führungsverantwortung tragen
+  - 🧑‍✈️🧭 Dateneigner (Data Owner). Fokus: Führungsaccountability tragen
   - 👩‍💼💡 Datenverwalter (Data Steward). Fokus: Fachanforderungen sicherstellen.
   - 🕵🏻⚙️ Datenhalter (Data Custodian). Fokus: Technische Expertise einbringen.
 - Aufgaben können delegiert werden. Verantwortung nicht.
@@ -20,7 +20,7 @@ Das Modell nutzt einen minimalen Ansatz mit drei Kernrollen, die gemeinsam den L
 
 | Perspektive | Rolle | Fokus | 
 |---|---|---|
-| Strategisch | 🧑‍✈️🧭 Dateneigner (Data Owner) | Führungsverantwortung tragen | 
+| Strategisch | 🧑‍✈️🧭 Dateneigner (Data Owner) | Führungsaccountability tragen | 
 | Fachlich | 👩‍💼💡 Datenverwalter (Data Steward) | Fachanforderungen sicherstellen. | 
 | Teschnisch | 🕵🏻⚙️ Datenhalter (Data Custodian) | Technische Expertise einbringen. | 
 
@@ -29,10 +29,10 @@ Das Modell nutzt einen minimalen Ansatz mit drei Kernrollen, die gemeinsam den L
 AKV als Tabelle: [Kernrollen: Tabelle AKV](https://blw-ofag-ufag.atlassian.net/wiki/spaces/BDSLD/pages/1385103362/Tabelle+AKV)
 
 ### 2.1 🧑‍✈️🧭 Dateneigner (Data Owner)
-> ⚠️ Der 🧑‍✈️🧭 Dateneigner (Data Owner) trägt die Verantwortung – auch wenn er nicht operativ arbeitet.
+> ⚠️ Der 🧑‍✈️🧭 Dateneigner (Data Owner) trägt die accountability – auch wenn er nicht operativ arbeitet.
 
 #### Kurzbeschreibung
-Der 🧑‍✈️🧭 Dateneigner (Data Owner) ist Mitglied der Geschäftsleitung und trägt die Gesamtverantwortung für die Daten seines Bereichs. Er entscheidet, wofür Daten genutzt werden dürfen, wie wichtig sie sind und welche Risiken akzeptiert werden.
+Der 🧑‍✈️🧭 Dateneigner (Data Owner) ist Mitglied der Geschäftsleitung und trägt die Gesamtaccountability für die Daten seines Bereichs. Er entscheidet, wofür Daten genutzt werden dürfen, wie wichtig sie sind und welche Risiken akzeptiert werden.
 
 #### Aufgaben
 - Definiert die strategisch relevanten Daten und priorisiert Dateninitiativen

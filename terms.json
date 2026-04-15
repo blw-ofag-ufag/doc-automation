@@ -22,8 +22,8 @@
     },
     "dataOwner": {
       "label": "\ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner)",
-      "slogan": "Der \ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner) tr\u00e4gt die accountability \u2013 auch wenn er nicht operativ arbeitet.",
-      "description": "Der \ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner) ist Mitglied der Gesch\u00e4ftsleitung und tr\u00e4gt die Gesamtaccountability f\u00fcr die Daten seines Bereichs. Er entscheidet, wof\u00fcr Daten genutzt werden d\u00fcrfen, wie wichtig sie sind und welche Risiken akzeptiert werden.",
+      "slogan": "Der \ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner) tr\u00e4gt die Verantwortung \u2013 auch wenn er nicht operativ arbeitet.",
+      "description": "Der \ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner) ist Mitglied der Gesch\u00e4ftsleitung und tr\u00e4gt die Gesamtverantwortung f\u00fcr die Daten seines Bereichs. Er entscheidet, wof\u00fcr Daten genutzt werden d\u00fcrfen, wie wichtig sie sind und welche Risiken akzeptiert werden.",
       "alias_en": "Data Owner",
       "alias_de": "\ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner",
       "related": [
@@ -47,7 +47,7 @@
         "description Schutzbedarf und Risikomitigierung der Daten",
         "Sicherstellen, dass Daten zur Zielerreichung des BLW beitragen"
       ],
-      "focus": "F\u00fchrungsaccountability tragen",
+      "focus": "F\u00fchrungsverantwortung tragen",
       "expertise": "Strategisch"
     },
     "dataCustodian": {

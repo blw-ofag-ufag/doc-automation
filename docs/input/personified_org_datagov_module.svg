@@ -112,7 +112,7 @@
 
     <!-- DATA LEAD -->
     <rect x="700" y="820" width="400" height="140" class="ext"/>
-    <text x="900" y="850" text-anchor="middle" class="title">{{dataManagementLead}}</text>
+    <text x="900" y="850" text-anchor="middle" class="title">{{dataManagementLead.label}}</text>
     <text x="800" y="875" class="small">
         <tspan x="730">• Koordination Governance</tspan>
         <tspan x="730" dy="15">• Unterstützung {{dataSteward.label}}</tspan>

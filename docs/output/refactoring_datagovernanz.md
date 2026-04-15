@@ -40,7 +40,7 @@ Der 🧑‍✈️🧭 Dateneigner (Data Owner) ist Mitglied der Geschäftsleitun
 - Initiiert Programme zur Qualitätsverbesserung
 - Stellt Ressourcen (Budget, Personal) bereit
 
-#### Kompetenzen
+#### Entscheidungskompetenzen
 - Priorisierung von Datenprojekten
 - Freigabe kritischer Datennutzungen (z. B. OGD, Datenaustausch)
 - Festlegung von Schutzbedarf und Risikoniveau
@@ -48,7 +48,7 @@ Der 🧑‍✈️🧭 Dateneigner (Data Owner) ist Mitglied der Geschäftsleitun
 
 #### Verantwortung
 - Rechtliche Compliance sicherstellen (z. B. Datenschutz, Fachgesetze)
-- Definition Schutzbedarf und Risikomitigierung der Daten
+- description Schutzbedarf und Risikomitigierung der Daten
 - Sicherstellen, dass Daten zur Zielerreichung des BLW beitragen
 
 ### 2.2 👩‍💼💡 Datenverwalter (Data Steward)
@@ -68,7 +68,7 @@ Der 👩‍💼💡 Datenverwalter (Data Steward) ist im Fachbereich angesiedelt
 - Koordiniert die Bereitstellung von Daten (inkl. OGD)
 - Analysiert und behebt Qualitätsprobleme (möglichst an der Quelle)
 
-#### Kompetenzen
+#### Entscheidungskompetenzen
 - Korrigiert operative Datenfehler
 - Definiert Qualitätsregeln und Standards (mit Unterstützung)
 - Entscheidet über kleinere Anpassungen in Prozessen
@@ -97,7 +97,7 @@ Der 🕵🏻⚙️ Datenhalter (Data Custodian) ist im nnformatiknahen Bereich a
 - Monitoring und Performance-Optimierung
 - Incident Management (z. B. Sicherheitsvorfälle)
 
-#### Kompetenzen
+#### Entscheidungskompetenzen
 - Technische Umsetzung von Sicherheits- und Betriebsmassnahmen
 - Sofortmassnahmen bei Sicherheitsvorfällen
 - Optimierung der Infrastruktur
@@ -108,4 +108,91 @@ Der 🕵🏻⚙️ Datenhalter (Data Custodian) ist im nnformatiknahen Bereich a
 - Sicherheit (Confidentiality)
 - Nachvollziehbarkeit (Logging, Traceability)
 
-...
+
+## 3. Weitere Module
+Je nach Komplexität des Prozesses ist es sinnvoll, die drei Kernrollen mit weiteren Rollen zu ergänzen. 
+Die Kernrollen behalten ihre Verantwortung, können aber Aufgaben und Entscheidungen an weitere involvierte Stellen abtreten.
+
+### 3.1 Governance & Steuerung
+
+#### 3.1.1 Gremium Datengouvernanz (GDG) 👥🧭 / ACB
+
+#### Kurzbeschreibung
+Das Gremium Datengouvernanz (DGD) ist das zentrale, bereichsübergreifende Entscheidungs- und Koordinationsgremium für Datenfragen. Die Mitglieder sind mandatiert und ihre Entscheidungen sind verbindlich.
+
+#### Aufgaben
+Entscheidet und koordiniert bei Konflikten zwischen 🧑‍✈️🧭 Dateneigner (Data Owner).
+
+#### Entscheidungskompetenzen
+Entscheidet bei Konflikten zwischen 🧑‍✈️🧭 Dateneigner (Data Owner) bei der Priorisierung von datenbezogenen Initiativen und Standardisierung und Harmonisierung von Daten.
+
+#### Verantwortung
+Sorgt für eine Abstimmung zwischen Digitalisierungsstrategie BLW und Umsetzung der BLW Datengouvernanz, koordiniert die Umsetzungsinitiativen und löst Konflikte bei der Standardisierung und Harmonisierung von Daten.
+
+#### 3.1.2 Geschäftsleitung
+Die Geschäftsleitung ist die oberste Entscheidungsinstanz für strategische und strukturelle Datenkonflikte. Die Geschäftsleitung entscheidet entlang der Organisationsstrategie – nicht entlang bestehender Strukturen.
+
+### 3.2 Data Management Lead 👤🧭
+
+#### Kurzbeschreibung
+Kompetenzstelle Daten und operative “Geschäftsstelle” für das DGD.
+
+#### Aufgaben
+- Operative Koordination der Data Governance
+- Vorbereitung von Entscheidungen DGD
+- Tracking der Reifegradentwicklung
+
+#### Entscheidungskompetenzen
+Keine
+
+#### Verantwortung
+- Meetings vorbereiten und dokumentieren
+- Enabling der 👩‍💼💡 Datenverwalter (Data Stewards)
+
+### 3.3 Datenschutzberater 👤⚖️
+
+#### Kurzbeschreibung
+Der Datenschutzberater 👤 ⚖️ stellt die Einhaltung rechtlichen Vorgaben bei der Bearbeitung von Personendaten sicher.
+
+#### Aufgaben
+- Prüft die Bearbeitung von Personendaten und empfiehlt Korrekturmassnahmen
+- Anlaufstelle bei Datenschutzfragen
+- Prüft Anfragen gemäss Informationsgesetz.
+
+#### Entscheidungskompetenzen
+Entscheidet über die Auslegung und Anwendung des Datenschutzrechts (insbesondere des Bundesgesetz über den Datenschutz (DSG)) in konkreten Fällen und gibt verbindliche Empfehlungen oder Stellungnahmen zu Datenbearbeitungen ab. Zudem beurteilt er Risiken, genehmigt bzw. fordert Anpassungen bei Projekten mit Personendaten und kann Massnahmen anordnen oder empfehlen, um die Einhaltung von Datenschutz und Datensicherheit sicherzustellen.
+
+#### Verantwortung
+Beratung von Lösungsarchitekten.
+
+### 3.4 ISBO (Informationssicherheitsbeauftragter der Organisation) 👤⚠️
+
+#### Kurzbeschreibung
+Der ISBO (Informationssicherheitsbeauftragter der Organisation) 👤⚠️ stellt sicher, dass die Vorgaben der Informationssicherheit eingehalten werden.
+
+#### Aufgaben
+- Prüft die Speicherungskriterien von Daten und empfiehlt Korrekturmassnahmen.
+- Kontrolliert deren Einhaltung.
+- Anlaufstelle bei Fragen der Informationssicherheit.
+
+#### Entscheidungskompetenzen
+Entscheidet über Sicherheitsmassnahmen, Standards und Richtlinien innerhalb der Organisation, und legt fest, wie Risiken angemessen behandelt werden. Zudem beurteilt er Sicherheitsrisiken bei Projekten und Systemen, priorisiert Schutzmassnahmen und gibt verbindliche Vorgaben oder Empfehlungen zur Gewährleistung der Informationssicherheit im Amt.
+
+#### Verantwortung
+Beratung von Lösungsarchitekten.
+### 3.5 Data User 👤⁉️
+
+#### Kurzbeschreibung
+Ein Data User ⁉️  will Daten des BLW für eine Projekte verwenden. Der Data User 👤⁉️  kann innerhalb oder ausserhalb des BLW arbeiten. Er/sie kann die Daten aber auch für private Projekte verwenden wollen.
+
+#### Aufgaben
+Keine
+
+#### Entscheidungskompetenzen
+- Daten verwenden oder nicht?
+- Spezifische Anforderungen an den  👩‍💼💡 Datenverwalter (Data Steward) melden.
+- Antrag für die Veröffentlichung zusätzlicher Daten gemäss EMBAG sicherstellen.
+
+#### Verantwortung
+- Eigene Auswertungen nach besten Wissen und Gewissen erstellen.
+- Publikationsrichtlinien (Zitierung!) umsetzen.

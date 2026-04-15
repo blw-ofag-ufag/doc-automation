@@ -34,7 +34,7 @@
 
     <!-- Data User -->
     <rect x="310" y="920" width="300" height="90" class="box user"/>
-    <text x="460" y="950" text-anchor="middle" class="title">Data User 👤⁉</text>
+    <text x="460" y="950" text-anchor="middle" class="title">Data User 👤⁉️</text>
     <text x="460" y="970" text-anchor="middle" class="text">Nutzung von Daten</text>
 
     <!-- Data User → Steward (vertikal links) -->
@@ -63,8 +63,8 @@
     <!-- Data Owner -->
     <rect x="120" y="540" width="300" height="100" class="box business"/>
     <text x="260" y="570" text-anchor="middle" class="title">🧑‍✈️🧭 Dateneigner (Data Owner)</text>
-    <text x="260" y="590" text-anchor="middle" class="text">Fachliche Entscheidung</text>
-    <text x="260" y="610" text-anchor="middle" class="text">Business Verantwortung</text>
+    <text x="260" y="590" text-anchor="middle" class="text">Business Verantwortung</text>
+    <text x="260" y="610" text-anchor="middle" class="text">Fachbereichsübergreifende Probleme</text>
 
     <!-- Steward → Custodian (90° Knick) -->
     <line x1="420" y1="770" x2="670" y2="770" class="line"/>
@@ -75,7 +75,7 @@
 
     <!-- Data Custodian -->
     <rect x="530" y="540" width="300" height="100" class="box it"/>
-    <text x="670" y="570" text-anchor="middle" class="title">🕵🏻⚙️ Datenhalter (Data Custodian)</text>
+    <text x="670" y="570" text-anchor="middle" class="title">{'label': '🕵🏻⚙️ Datenhalter (Data Custodian)', 'description': 'Der 🕵🏻⚙️ Datenhalter (Data Custodian) ist im nnformatiknahen Bereich angesiedelt und stellt sicher, dass Daten technisch verfügbar, sicher und performant sind. Wo die 🕵🏻⚙️ Datenhalter (Data Custodian) angesiedelt sind, hängt von den jeweiligen Daten ab. Diese können im Amt, in der Bundesverwaltung, bei den Kantonen oder auch bei privaten Anbietern gehalten werden.', 'slogan': 'Der 🕵🏻⚙️ Datenhalter (Data Custodian) sorgt dafür, dass Daten sicher und zuverlässig gespeichert und extrahiert werden.', 'alias_en': 'Data Custodian', 'alias_de': '🕵🏻⚙️ Datenhalter', 'related': ['dataOwner', 'dataSteward'], 'responsibility': [{'Betrieb von': ['Datenbanken', 'Schnittstellen']}, 'Infrastruktur (On-Prem / Cloud)', {'Umsetzung von': ['Zugriffskontrollen', 'Verschlüsselung']}, 'Backup & Recovery', 'Monitoring und Performance-Optimierung', 'Incident Management (z. B. Sicherheitsvorfälle)'], 'authority': ['Technische Umsetzung von Sicherheits- und Betriebsmassnahmen', 'Sofortmassnahmen bei Sicherheitsvorfällen', 'Optimierung der Infrastruktur'], 'accountability': ['Verfügbarkeit', 'Integrität', 'Sicherheit (Confidentiality)', 'Nachvollziehbarkeit (Logging, Traceability)'], 'focus': 'Technische Expertise einbringen.', 'expertise': 'Teschnisch'}</text>
     <text x="670" y="590" text-anchor="middle" class="text">Technische Umsetzung</text>
     <text x="670" y="610" text-anchor="middle" class="text">Systeme • Datenhaltung</text>
 

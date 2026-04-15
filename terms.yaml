@@ -19,8 +19,8 @@ terms:
 
   dataOwner:
     label: 🧑‍✈️🧭 Dateneigner (Data Owner)
-    slogan: Der 🧑‍✈️🧭 Dateneigner (Data Owner) trägt die accountability – auch wenn er nicht operativ arbeitet.
-    description: Der 🧑‍✈️🧭 Dateneigner (Data Owner) ist Mitglied der Geschäftsleitung und trägt die Gesamtaccountability für die Daten seines Bereichs. Er entscheidet, wofür Daten genutzt werden dürfen, wie wichtig sie sind und welche Risiken akzeptiert werden.
+    slogan: Der 🧑‍✈️🧭 Dateneigner (Data Owner) trägt die Verantwortung – auch wenn er nicht operativ arbeitet.
+    description: Der 🧑‍✈️🧭 Dateneigner (Data Owner) ist Mitglied der Geschäftsleitung und trägt die Gesamtverantwortung für die Daten seines Bereichs. Er entscheidet, wofür Daten genutzt werden dürfen, wie wichtig sie sind und welche Risiken akzeptiert werden.
     alias_en: Data Owner
     alias_de: 🧑‍✈️🧭 Dateneigner
     related:
@@ -40,7 +40,7 @@ terms:
     - Rechtliche Compliance sicherstellen (z. B. Datenschutz, Fachgesetze)
     - description Schutzbedarf und Risikomitigierung der Daten
     - Sicherstellen, dass Daten zur Zielerreichung des BLW beitragen
-    focus: Führungsaccountability tragen
+    focus: Führungsverantwortung tragen
     expertise: Strategisch
 
   dataCustodian:
@@ -106,7 +106,6 @@ terms:
     focus: Fachanforderungen sicherstellen.
     expertise: Fachlich
 
- 
   gdg:
     label: Gremium Datengouvernanz (GDG) 👥🧭 / ACB
     description: Das Gremium Datengouvernanz (DGD) ist das zentrale, bereichsübergreifende Entscheidungs- und Koordinationsgremium für Datenfragen. Die Mitglieder sind mandatiert und ihre Entscheidungen sind verbindlich.
@@ -131,8 +130,6 @@ terms:
       - Meetings vorbereiten und dokumentieren
       - Enabling der 👩‍💼💡 Datenverwalter (Data Stewards)
     aliases: Data Management Specialist 👤⚙️
-
-
 
   dataArchitect:
     label: Datenarchitekt 👤⚙️

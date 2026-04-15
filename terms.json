@@ -2,7 +2,7 @@
   "terms": {
     "data": {
       "label": "Daten",
-      "definition": "Strukturierte oder unstrukturierte Fakten, Messwerte oder Beobachtungen, die als Grundlage von Entscheidugnen oder Analysen dienen. Grunds\u00e4tzlich sind drei Arten von Daten (numerische Daten wie  Messwerte, kategoriale Daten wie Beschreibungen und Metadaten (Daten \u00fcber Daten)) zu unterscheiden.",
+      "description": "Strukturierte oder unstrukturierte Fakten, Messwerte oder Beobachtungen, die als Grundlage von Entscheidugnen oder Analysen dienen. Grunds\u00e4tzlich sind drei Arten von Daten (numerische Daten wie  Messwerte, kategoriale Daten wie Beschreibungen und Metadaten (Daten \u00fcber Daten)) zu unterscheiden.",
       "slogan": "Daten sind eine strategische Ressource des BLW",
       "related": [
         "dataCustodian",
@@ -12,7 +12,7 @@
     },
     "validation": {
       "label": "Validierung",
-      "definition": "Pr\u00fcfung, ob die Bedeutung gem\u00e4ss fachlicher Termini (Glossar) oder ob die definiterten Qualit\u00e4tstandards (fit-for-purpuse) eingehalten wurden.",
+      "description": "Pr\u00fcfung, ob die Bedeutung gem\u00e4ss fachlicher Termini (Glossar) oder ob die definiterten Qualit\u00e4tstandards (fit-for-purpuse) eingehalten wurden.",
       "related": [
         "dataCustodian",
         "dataSteward",
@@ -23,10 +23,9 @@
     "dataOwner": {
       "label": "\ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner)",
       "slogan": "Der \ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner) tr\u00e4gt die accountability \u2013 auch wenn er nicht operativ arbeitet.",
-      "definition": "Der \ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner) ist Mitglied der Gesch\u00e4ftsleitung und tr\u00e4gt die Gesamtaccountability f\u00fcr die Daten seines Bereichs. Er entscheidet, wof\u00fcr Daten genutzt werden d\u00fcrfen, wie wichtig sie sind und welche Risiken akzeptiert werden.",
-      "aliases": [
-        "Data Owner"
-      ],
+      "description": "Der \ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner) ist Mitglied der Gesch\u00e4ftsleitung und tr\u00e4gt die Gesamtaccountability f\u00fcr die Daten seines Bereichs. Er entscheidet, wof\u00fcr Daten genutzt werden d\u00fcrfen, wie wichtig sie sind und welche Risiken akzeptiert werden.",
+      "alias_en": "Data Owner",
+      "alias_de": "\ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner",
       "related": [
         "dataCustodian",
         "dataSteward"
@@ -45,7 +44,7 @@
       ],
       "accountability": [
         "Rechtliche Compliance sicherstellen (z. B. Datenschutz, Fachgesetze)",
-        "Definition Schutzbedarf und Risikomitigierung der Daten",
+        "description Schutzbedarf und Risikomitigierung der Daten",
         "Sicherstellen, dass Daten zur Zielerreichung des BLW beitragen"
       ],
       "focus": "F\u00fchrungsaccountability tragen",
@@ -53,11 +52,10 @@
     },
     "dataCustodian": {
       "label": "\ud83d\udd75\ud83c\udffb\u2699\ufe0f Datenhalter (Data Custodian)",
-      "definition": "Der \ud83d\udd75\ud83c\udffb\u2699\ufe0f Datenhalter (Data Custodian) ist im nnformatiknahen Bereich angesiedelt und stellt sicher, dass Daten technisch verf\u00fcgbar, sicher und performant sind. Wo die \ud83d\udd75\ud83c\udffb\u2699\ufe0f Datenhalter (Data Custodian) angesiedelt sind, h\u00e4ngt von den jeweiligen Daten ab. Diese k\u00f6nnen im Amt, in der Bundesverwaltung, bei den Kantonen oder auch bei privaten Anbietern gehalten werden.",
+      "description": "Der \ud83d\udd75\ud83c\udffb\u2699\ufe0f Datenhalter (Data Custodian) ist im nnformatiknahen Bereich angesiedelt und stellt sicher, dass Daten technisch verf\u00fcgbar, sicher und performant sind. Wo die \ud83d\udd75\ud83c\udffb\u2699\ufe0f Datenhalter (Data Custodian) angesiedelt sind, h\u00e4ngt von den jeweiligen Daten ab. Diese k\u00f6nnen im Amt, in der Bundesverwaltung, bei den Kantonen oder auch bei privaten Anbietern gehalten werden.",
       "slogan": "Der \ud83d\udd75\ud83c\udffb\u2699\ufe0f Datenhalter (Data Custodian) sorgt daf\u00fcr, dass Daten sicher und zuverl\u00e4ssig gespeichert und extrahiert werden.",
-      "aliases": [
-        "Data Custodian"
-      ],
+      "alias_en": "Data Custodian",
+      "alias_de": "\ud83d\udd75\ud83c\udffb\u2699\ufe0f Datenhalter",
       "related": [
         "dataOwner",
         "dataSteward"
@@ -96,11 +94,10 @@
     },
     "dataSteward": {
       "label": "\ud83d\udc69\u200d\ud83d\udcbc\ud83d\udca1 Datenverwalter (Data Steward)",
-      "definition": "Der \ud83d\udc69\u200d\ud83d\udcbc\ud83d\udca1 Datenverwalter (Data Steward) ist im Fachbereich angesiedelt und stellt sicher, dass Daten verst\u00e4ndlich, korrekt und nutzbar sind. Er ist die zentrale Drehscheibe zwischen Fach, IT und Governance.",
+      "description": "Der \ud83d\udc69\u200d\ud83d\udcbc\ud83d\udca1 Datenverwalter (Data Steward) ist im Fachbereich angesiedelt und stellt sicher, dass Daten verst\u00e4ndlich, korrekt und nutzbar sind. Er ist die zentrale Drehscheibe zwischen Fach, IT und Governance.",
       "slogan": "Der \ud83d\udc69\u200d\ud83d\udcbc\ud83d\udca1 Datenverwalter (Data Steward) sorgt daf\u00fcr, dass Daten richtig verstanden und richtig genutzt werden.",
-      "aliases": [
-        "Data Steward"
-      ],
+      "alias_en": "Data Steward",
+      "alias_de": "\ud83d\udc69\u200d\ud83d\udcbc\ud83d\udca1 Datenverwalter",
       "related": [
         "dataCustodian",
         "dataOwner"
@@ -136,31 +133,27 @@
       "focus": "Fachanforderungen sicherstellen.",
       "expertise": "Fachlich"
     },
-    "test": {
-      "label": "Test",
-      "definition": "This is a testcase",
-      "related": [
-        "dataCustodian",
-        "dataSteward",
-        "dataOwner"
-      ]
-    },
     "gdg": {
-      "label": "Gremium Datengouvernanz (GDG) \ud83d\udc65\ud83e\udded",
-      "definition": "Das Gremium Datengouvernanz (DGD) ist das zentrale, bereichs\u00fcbergreifende Entscheidungs- und Koordinationsgremium f\u00fcr Datenfragen. Die Mitglieder sind mandatiert und ihre Entscheidungen sind verbindlich.",
+      "label": "Gremium Datengouvernanz (GDG) \ud83d\udc65\ud83e\udded / ACB",
+      "description": "Das Gremium Datengouvernanz (DGD) ist das zentrale, bereichs\u00fcbergreifende Entscheidungs- und Koordinationsgremium f\u00fcr Datenfragen. Die Mitglieder sind mandatiert und ihre Entscheidungen sind verbindlich.",
       "responsibility": "Entscheidet und koordiniert bei Konflikten zwischen \ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner).",
       "authority": "Entscheidet bei Konflikten zwischen \ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner) bei der Priorisierung von datenbezogenen Initiativen und Standardisierung und Harmonisierung von Daten.",
       "accountability": "Sorgt f\u00fcr eine Abstimmung zwischen Digitalisierungsstrategie BLW und Umsetzung der BLW Datengouvernanz, koordiniert die Umsetzungsinitiativen und l\u00f6st Konflikte bei der Standardisierung und Harmonisierung von Daten."
     },
+    "bod": {
+      "label": "Gesch\u00e4ftsleitung",
+      "alias_de": "Direktion (GL)",
+      "description": "Die Gesch\u00e4ftsleitung ist die oberste Entscheidungsinstanz f\u00fcr strategische und strukturelle Datenkonflikte. Die Gesch\u00e4ftsleitung entscheidet entlang der Organisationsstrategie \u2013 nicht entlang bestehender Strukturen."
+    },
     "dataManagementLead": {
       "label": "Data Management Lead \ud83d\udc64\ud83e\udded",
-      "definition": "Kompetenzstelle Daten und operative \u201cGesch\u00e4ftsstelle\u201d f\u00fcr das DGD.",
+      "description": "Kompetenzstelle Daten und operative \u201cGesch\u00e4ftsstelle\u201d f\u00fcr das DGD.",
       "responsibility": [
         "Operative Koordination der Data Governance",
         "Vorbereitung von Entscheidungen DGD",
         "Tracking der Reifegradentwicklung"
       ],
-      "authority": "None",
+      "authority": "Keine",
       "accountability": [
         "Meetings vorbereiten und dokumentieren",
         "Enabling der \ud83d\udc69\u200d\ud83d\udcbc\ud83d\udca1 Datenverwalter (Data Stewards)"
@@ -169,7 +162,50 @@
     },
     "dataArchitect": {
       "label": "Datenarchitekt \ud83d\udc64\u2699\ufe0f",
-      "definition": "bla."
+      "description": "Data Architect  \ud83d\udc64\ud83d\udcd0 ist f\u00fcr die Festlegung der Richtlinien, Verfahren, Modelle und Technologien verantwortlich, die beim Sammeln, Organisieren, Speichern und Zugreifen auf die BLW-Daten verwendet werden sollen.",
+      "responsibility": [
+        "Definiert Datenmodelle, Standards, Interoperabilit\u00e4t",
+        "Konzeption und Verwaltung der Dateninfrastruktur eines Unternehmens",
+        "Entwicklung von Datenrichtlinien und -standards, die auf die Gesch\u00e4ftsziele und technologischen M\u00f6glichkeiten abgestimmt sind"
+      ],
+      "authority": "Entscheidet \u00fcber die Auswahl geeigneter Datenbanktechnologien, Architekturans\u00e4tze und Integrationsstrategien, um eine effiziente und skalierbare Datenlandschaft sicherzustellen. Zudem entscheidet er \u00fcber Standards, Richtlinien und Governance-Strukturen, die den Umgang mit Daten im Unternehmen regeln und langfristig Qualit\u00e4t sowie Sicherheit gew\u00e4hrleisten.",
+      "accountability": "Plant eine skalierbare und sichere Datenarchitektur, die den Anforderungen des BLW entspricht. Stellt sicher, dass Daten konsistent, verf\u00fcgbar und qualitativ hochwertig sind sowie den geltenden Datenschutz- und Compliance-Vorgaben entsprechen."
+    },
+    "complianceOfficer": {
+      "label": "Datenschutzberater \ud83d\udc64\u2696\ufe0f",
+      "description": "Der Datenschutzberater \ud83d\udc64 \u2696\ufe0f stellt die Einhaltung rechtlichen Vorgaben bei der Bearbeitung von Personendaten sicher.",
+      "responsibility": [
+        "Pr\u00fcft die Bearbeitung von Personendaten und empfiehlt Korrekturmassnahmen",
+        "Anlaufstelle bei Datenschutzfragen",
+        "Pr\u00fcft Anfragen gem\u00e4ss Informationsgesetz."
+      ],
+      "authority": "Entscheidet \u00fcber die Auslegung und Anwendung des Datenschutzrechts (insbesondere des Bundesgesetz \u00fcber den Datenschutz (DSG)) in konkreten F\u00e4llen und gibt verbindliche Empfehlungen oder Stellungnahmen zu Datenbearbeitungen ab. Zudem beurteilt er Risiken, genehmigt bzw. fordert Anpassungen bei Projekten mit Personendaten und kann Massnahmen anordnen oder empfehlen, um die Einhaltung von Datenschutz und Datensicherheit sicherzustellen.",
+      "accountability": "Beratung von L\u00f6sungsarchitekten."
+    },
+    "informationSecurityOfficer": {
+      "label": "ISBO (Informationssicherheitsbeauftragter der Organisation) \ud83d\udc64\u26a0\ufe0f",
+      "description": "Der ISBO (Informationssicherheitsbeauftragter der Organisation) \ud83d\udc64\u26a0\ufe0f stellt sicher, dass die Vorgaben der Informationssicherheit eingehalten werden.",
+      "responsibility": [
+        "Pr\u00fcft die Speicherungskriterien von Daten und empfiehlt Korrekturmassnahmen.",
+        "Kontrolliert deren Einhaltung.",
+        "Anlaufstelle bei Fragen der Informationssicherheit."
+      ],
+      "authority": "Entscheidet \u00fcber Sicherheitsmassnahmen, Standards und Richtlinien innerhalb der Organisation, und legt fest, wie Risiken angemessen behandelt werden. Zudem beurteilt er Sicherheitsrisiken bei Projekten und Systemen, priorisiert Schutzmassnahmen und gibt verbindliche Vorgaben oder Empfehlungen zur Gew\u00e4hrleistung der Informationssicherheit im Amt.",
+      "accountability": "Beratung von L\u00f6sungsarchitekten."
+    },
+    "dataUser": {
+      "label": "Data User \ud83d\udc64\u2049\ufe0f",
+      "description": "Ein Data User \u2049\ufe0f  will Daten des BLW f\u00fcr eine Projekte verwenden. Der Data User \ud83d\udc64\u2049\ufe0f  kann innerhalb oder ausserhalb des BLW arbeiten. Er/sie kann die Daten aber auch f\u00fcr private Projekte verwenden wollen.",
+      "responsibility": "Keine",
+      "authority": [
+        "Daten verwenden oder nicht?",
+        "Spezifische Anforderungen an den  \ud83d\udc69\u200d\ud83d\udcbc\ud83d\udca1 Datenverwalter (Data Steward) melden.",
+        "Antrag f\u00fcr die Ver\u00f6ffentlichung zus\u00e4tzlicher Daten gem\u00e4ss EMBAG sicherstellen."
+      ],
+      "accountability": [
+        "Eigene Auswertungen nach besten Wissen und Gewissen erstellen.",
+        "Publikationsrichtlinien (Zitierung!) umsetzen."
+      ]
     }
   }
 }

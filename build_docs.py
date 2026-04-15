@@ -32,7 +32,7 @@ VAR_PATTERN = r"\{\{([a-zA-Z0-9_\.]+)\}\}"
 LOOP_PATTERN = r"\{\{for ([a-zA-Z0-9_]+) in ([a-zA-Z0-9_\.]+)\}\}(.*?)\{\{endfor\}\}"
 IF_PATTERN = r"\{\{if ([a-zA-Z0-9_\.]+)\}\}(.*?)\{\{endif\}\}"
 
-REQUIRED_FIELDS = ["label", "definition"]
+REQUIRED_FIELDS = ["label", "description"]
 REFERENCE_FIELDS = ["related", "processes"]
 
 # ------------------------

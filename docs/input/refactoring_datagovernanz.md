@@ -9,8 +9,8 @@
 - Klare Verantwortlichkeiten fürhen zu besseren und schnelleren Entscheidungen.
 - Modular erweiterbar für IT, Compliance und Governance
 
-## 1. Grundsätze
-Die Data Governance stellt sicher, dass Daten als strategische Ressource gesteuert, verantwortet und genutzt können. Dies soll
+## 1. Grundsätze {{dataGovernance.label}}
+{{dataGovernance.description}}. Dies soll
 - Geschäftsprozesse effizient und digital unterstützt werden
 - Daten mehrfach genutzt werden (intern & mit anderen Behörden)
  - gesetzliche Anforderungen jederzeit erfüllt sind

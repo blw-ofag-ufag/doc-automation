@@ -50,6 +50,30 @@ def load_cache():
 def save_cache(cache):
     CACHE_FILE.write_text(json.dumps(cache, indent=2))
 
+def escape_amp_only(text: str) -> str:
+    """
+    Safely escape '&' without breaking existing entities.
+    Works for SVG + Confluence + HTML-safe outputs.
+    """
+
+    if not isinstance(text, str):
+        return text
+
+    # Step 1: protect existing entities
+    text = text.replace("&amp;", "__AMP__")
+    text = text.replace("&lt;", "__LT__")
+    text = text.replace("&gt;", "__GT__")
+
+    # Step 2: escape raw ampersands only
+    text = text.replace("&", "&amp;")
+
+    # Step 3: restore valid entities
+    text = text.replace("__AMP__", "&amp;")
+    text = text.replace("__LT__", "&lt;")
+    text = text.replace("__GT__", "&gt;")
+
+    return text
+
 # ------------------------
 # YAML / VALIDATION
 # ------------------------
@@ -224,14 +248,16 @@ def replace_variables(text, terms, errors, local_ctx=None):
         if value is None:
             return f"[UNKNOWN:{path}]"
 
-        # ✅ UPDATED: use recursive rendering
+        # ✅ Case 1: lists → handled structurally, DO NOT escape here
         if isinstance(value, list):
             return "\n".join(render_list(value, terms, errors))
 
+        # ✅ Case 2: term reference → link, no escaping here either
         if isinstance(value, str) and value in terms:
             return make_link(value, terms)
 
-        return str(value)
+        # ✅ Case 3: scalar values → escape safely HERE
+        return escape_amp_only(str(value))
 
     return re.sub(VAR_PATTERN, repl, text)
 
@@ -320,7 +346,11 @@ def process_file(
         return errors
 
     original = input_path.read_text()
+    
     updated = render(original, terms, errors)
+
+    # 🔥 ensure safe SVG / XML output
+    updated = escape_amp_only(updated)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
 

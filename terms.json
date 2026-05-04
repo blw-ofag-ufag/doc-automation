@@ -10,6 +10,12 @@
         "dataOwner"
       ]
     },
+    "dataGovernance": {
+      "label": "Datengouvernanz",
+      "description": "Die Data Governance stellt sicher, dass Daten als strategische Ressource gesteuert, verantwortet und genutzt k\u00f6nnen.",
+      "mantra1": "\ud83d\udc49 Keine Rolle funktioniert isoliert \u2013 Data Governance ist Zusammenarbeit.",
+      "mantra2": "\ud83d\udc49 Aufgaben und Kompetenzen k\u00f6nnen delegiert werden, nicht aber Verantwortung."
+    },
     "validation": {
       "label": "Validierung",
       "description": "Pr\u00fcfung, ob die Bedeutung gem\u00e4ss fachlicher Termini (Glossar) oder ob die definiterten Qualit\u00e4tstandards (fit-for-purpuse) eingehalten wurden.",
@@ -22,6 +28,7 @@
     },
     "dataOwner": {
       "label": "\ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner)",
+      "perspective": "F\u00fchrungsverantwortung tragen.",
       "slogan": "Der \ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner) tr\u00e4gt die Verantwortung \u2013 auch wenn er nicht operativ arbeitet.",
       "description": "Der \ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner) ist Mitglied der Gesch\u00e4ftsleitung und tr\u00e4gt die Gesamtverantwortung f\u00fcr die Daten seines Bereichs. Er entscheidet, wof\u00fcr Daten genutzt werden d\u00fcrfen, wie wichtig sie sind und welche Risiken akzeptiert werden.",
       "alias_en": "Data Owner",
@@ -47,11 +54,12 @@
         "description Schutzbedarf und Risikomitigierung der Daten",
         "Sicherstellen, dass Daten zur Zielerreichung des BLW beitragen"
       ],
-      "focus": "F\u00fchrungsverantwortung tragen",
+      "focus": "Verantwortung & Steuerung",
       "expertise": "Strategisch"
     },
     "dataCustodian": {
       "label": "\ud83d\udd75\ud83c\udffb\u2699\ufe0f Datenhalter (Data Custodian)",
+      "perspective": "Technische Expertise einbringen.",
       "description": "Der \ud83d\udd75\ud83c\udffb\u2699\ufe0f Datenhalter (Data Custodian) ist im nnformatiknahen Bereich angesiedelt und stellt sicher, dass Daten technisch verf\u00fcgbar, sicher und performant sind. Wo die \ud83d\udd75\ud83c\udffb\u2699\ufe0f Datenhalter (Data Custodian) angesiedelt sind, h\u00e4ngt von den jeweiligen Daten ab. Diese k\u00f6nnen im Amt, in der Bundesverwaltung, bei den Kantonen oder auch bei privaten Anbietern gehalten werden.",
       "slogan": "Der \ud83d\udd75\ud83c\udffb\u2699\ufe0f Datenhalter (Data Custodian) sorgt daf\u00fcr, dass Daten sicher und zuverl\u00e4ssig gespeichert und extrahiert werden.",
       "alias_en": "Data Custodian",
@@ -89,11 +97,12 @@
         "Sicherheit (Confidentiality)",
         "Nachvollziehbarkeit (Logging, Traceability)"
       ],
-      "focus": "Technische Expertise einbringen.",
+      "focus": "Infrastruktur, Provision & Sicherheit.",
       "expertise": "Teschnisch"
     },
     "dataSteward": {
       "label": "\ud83d\udc69\u200d\ud83d\udcbc\ud83d\udca1 Datenverwalter (Data Steward)",
+      "perspective": "Fachanforderungen sicherstellen.",
       "description": "Der \ud83d\udc69\u200d\ud83d\udcbc\ud83d\udca1 Datenverwalter (Data Steward) ist im Fachbereich angesiedelt und stellt sicher, dass Daten verst\u00e4ndlich, korrekt und nutzbar sind. Er ist die zentrale Drehscheibe zwischen Fach, IT und Governance.",
       "slogan": "Der \ud83d\udc69\u200d\ud83d\udcbc\ud83d\udca1 Datenverwalter (Data Steward) sorgt daf\u00fcr, dass Daten richtig verstanden und richtig genutzt werden.",
       "alias_en": "Data Steward",
@@ -130,7 +139,7 @@
         "Semantische Klarheit (einheitliche Begriffe)",
         "Einhaltung der Governance im Alltag"
       ],
-      "focus": "Fachanforderungen sicherstellen.",
+      "focus": "Qualit\u00e4t, Nutzung & Interpretation.",
       "expertise": "Fachlich"
     },
     "gdg": {
@@ -172,8 +181,8 @@
       "accountability": "Plant eine skalierbare und sichere Datenarchitektur, die den Anforderungen des BLW entspricht. Stellt sicher, dass Daten konsistent, verf\u00fcgbar und qualitativ hochwertig sind sowie den geltenden Datenschutz- und Compliance-Vorgaben entsprechen."
     },
     "complianceOfficer": {
-      "label": "Datenschutzbeauftragter \ud83d\udc64\u2696\ufe0f",
-      "description": "Der Datenschutzbeauftragter \ud83d\udc64 \u2696\ufe0f stellt die Einhaltung rechtlichen Vorgaben bei der Bearbeitung von Personendaten sicher.",
+      "label": "Datenschutzberater \ud83d\udc64\u2696\ufe0f",
+      "description": "Der Datenschutzberater \ud83d\udc64 \u2696\ufe0f stellt die Einhaltung rechtlichen Vorgaben bei der Bearbeitung von Personendaten sicher.",
       "responsibility": [
         "Pr\u00fcft die Bearbeitung von Personendaten und empfiehlt Korrekturmassnahmen",
         "Anlaufstelle bei Datenschutzfragen",
@@ -196,16 +205,13 @@
     "dataUser": {
       "label": "Data User \ud83d\udc64\u2049\ufe0f",
       "description": "Ein Data User \u2049\ufe0f  will Daten des BLW f\u00fcr eine Projekte verwenden. Der Data User \ud83d\udc64\u2049\ufe0f  kann innerhalb oder ausserhalb des BLW arbeiten. Er/sie kann die Daten aber auch f\u00fcr private Projekte verwenden wollen.",
-      "responsibility": "Keine",
+      "responsibility": "Eigene Auswertungen nach besten Wissen und Gewissen erstellen.",
       "authority": [
         "Daten verwenden oder nicht?",
         "Spezifische Anforderungen an den  \ud83d\udc69\u200d\ud83d\udcbc\ud83d\udca1 Datenverwalter (Data Steward) melden.",
         "Antrag f\u00fcr die Ver\u00f6ffentlichung zus\u00e4tzlicher Daten gem\u00e4ss EMBAG sicherstellen."
       ],
-      "accountability": [
-        "Eigene Auswertungen nach besten Wissen und Gewissen erstellen.",
-        "Publikationsrichtlinien (Zitierung!) umsetzen."
-      ]
+      "accountability": "Publikationsrichtlinien (Zitierung!) umsetzen."
     }
   }
 }

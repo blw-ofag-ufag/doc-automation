@@ -75,7 +75,7 @@
 
     <!-- Data Custodian -->
     <rect x="530" y="540" width="300" height="100" class="box it"/>
-    <text x="670" y="570" text-anchor="middle" class="title">{{dataCustodian}}</text>
+    <text x="670" y="570" text-anchor="middle" class="title">{{dataCustodian.label}}</text>
     <text x="670" y="590" text-anchor="middle" class="text">Technische Umsetzung</text>
     <text x="670" y="610" text-anchor="middle" class="text">Systeme • Datenhaltung</text>
 

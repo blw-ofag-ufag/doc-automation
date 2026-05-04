@@ -15,4 +15,4 @@
 {{dataGovernance.mantra1}}
 {{dataGovernance.mantra2}}
 
-@attach raci_kernrolle |  Einfaches Modell der Kernrollen
+@attach model_kernrolle |  Einfaches Modell der Kernrollen

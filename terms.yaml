@@ -9,6 +9,8 @@ terms:
       - dataOwner
 
   dataGovernance:
+    label: Datengouvernanz
+    description: Die Data Governance stellt sicher, dass Daten als strategische Ressource gesteuert, verantwortet und genutzt können. 
     mantra1: 👉 Keine Rolle funktioniert isoliert – Data Governance ist Zusammenarbeit.
     mantra2: 👉 Aufgaben und Kompetenzen können delegiert werden, nicht aber Verantwortung.
 

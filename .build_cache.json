@@ -5,7 +5,7 @@
   },
   "/home/pascal.hurni@blw.admin.ch/doc-automation/docs/input/diagram.svg": {
     "input_hash": "cdc7cad9a7e528667cec151a23b65689",
-    "terms_hash": "d9ae896fc20ceb7203ec2bc6043b4800"
+    "terms_hash": "4e78a1eaaded59c6ecf28380f2fbc56c"
   },
   "/home/pascal.hurni@blw.admin.ch/doc-automation/docs/input/personified_komplett_org_datagov.svg": {
     "input_hash": "01fc79831713ceaaedffa93bef2fdedf",
@@ -17,19 +17,39 @@
   },
   "/home/pascal.hurni@blw.admin.ch/doc-automation/docs/input/Beispiel_Mars.svg": {
     "input_hash": "3f1c42d2568b6092c1742a2cad730150",
-    "terms_hash": "d9ae896fc20ceb7203ec2bc6043b4800"
+    "terms_hash": "4e78a1eaaded59c6ecf28380f2fbc56c"
   },
   "/home/pascal.hurni@blw.admin.ch/doc-automation/docs/input/einfaches_raci_datagov.svg": {
     "input_hash": "4d659097fc9de1e7eba3f6d75d4eed4c",
     "terms_hash": "d9ae896fc20ceb7203ec2bc6043b4800"
   },
   "/home/pascal.hurni@blw.admin.ch/doc-automation/docs/input/refactoring_datagovernanz.md": {
-    "input_hash": "eb91b89c11788c3ebe0fafb9fbae6ad8",
-    "terms_hash": "d9ae896fc20ceb7203ec2bc6043b4800"
+    "input_hash": "513c1fc03c90fc16c79bd4aecaa71069",
+    "terms_hash": "4e78a1eaaded59c6ecf28380f2fbc56c"
   },
   "/home/pascal.hurni@blw.admin.ch/doc-automation/docs/input/zusammenspiel.md": {
     "input_hash": "a9dfa767e72dd4c32e3723e31e11f117",
+    "terms_hash": "4e78a1eaaded59c6ecf28380f2fbc56c"
+  },
+  "_terms_hash": "4e78a1eaaded59c6ecf28380f2fbc56c",
+  "/home/pascal.hurni@blw.admin.ch/doc-automation/docs/input/raci_kernmodell.md": {
+    "input_hash": "9c784d103e75201f5cf9f26740299e4e",
+    "terms_hash": "4e78a1eaaded59c6ecf28380f2fbc56c"
+  },
+  "/home/pascal.hurni@blw.admin.ch/doc-automation/docs/input/datagov_module.svg": {
+    "input_hash": "436124a3118868d125b3e49ea9494c23",
     "terms_hash": "d9ae896fc20ceb7203ec2bc6043b4800"
   },
-  "_terms_hash": "d9ae896fc20ceb7203ec2bc6043b4800"
+  "/home/pascal.hurni@blw.admin.ch/doc-automation/docs/input/datagov_kernrollen.svg": {
+    "input_hash": "d935877fc4c69ae39c8251196117d3ae",
+    "terms_hash": "4e78a1eaaded59c6ecf28380f2fbc56c"
+  },
+  "/home/pascal.hurni@blw.admin.ch/doc-automation/docs/input/datagov__module.svg": {
+    "input_hash": "01fc79831713ceaaedffa93bef2fdedf",
+    "terms_hash": "4e78a1eaaded59c6ecf28380f2fbc56c"
+  },
+  "/home/pascal.hurni@blw.admin.ch/doc-automation/docs/input/raci_kernmodell.svg": {
+    "input_hash": "4d659097fc9de1e7eba3f6d75d4eed4c",
+    "terms_hash": "4e78a1eaaded59c6ecf28380f2fbc56c"
+  }
 }

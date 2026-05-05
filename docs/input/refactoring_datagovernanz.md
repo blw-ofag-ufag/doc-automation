@@ -9,7 +9,13 @@
 - Klare Verantwortlichkeiten fürhen zu besseren und schnelleren Entscheidungen.
 - Modular erweiterbar für IT, Compliance und Governance
 
-## 1. Grundsätze {{dataGovernance.label}}
+---
+
+[TOC]
+
+---
+
+# 1. Grundsätze {{dataGovernance.label}}
 {{dataGovernance.description}}. Dies soll
 - Geschäftsprozesse effizient und digital unterstützt werden
 - Daten mehrfach genutzt werden (intern & mit anderen Behörden)
@@ -24,130 +30,139 @@ Das Modell nutzt einen minimalen Ansatz mit drei Kernrollen, die gemeinsam den L
 | {{dataSteward.expertise}} | {{dataSteward.label}} | {{dataSteward.focus}} | 
 | {{dataCustodian.expertise}} | {{dataCustodian.label}} | {{dataCustodian.focus}} | 
 
-## 2. Kernmodell
+@attach beispiel_mars | Die Grafik zeigt das Kernrollenmodell anhand des Beispiels MARS (Marktdaten Analyse- und Reporting-System).
+
+# 2. Kernmodell
 👉  Aufgaben und Entscheidungen können delegiert werden. Aber nicht Verantwortung.
 AKV als Tabelle: [Kernrollen: Tabelle AKV](https://blw-ofag-ufag.atlassian.net/wiki/spaces/BDSLD/pages/1385103362/Tabelle+AKV)
 
-### 2.1 {{dataOwner.label}}
+## 2.1 {{dataOwner.label}}
 > ⚠️ {{dataOwner.slogan}}
 
-#### Kurzbeschreibung
+### 2.1.1 Kurzbeschreibung
 {{dataOwner.description}}
 
-#### Aufgaben
+### 2.1.2 Aufgaben
 {{dataOwner.responsibility}}
 
-#### Entscheidungskompetenzen
+### 2.1.3 Entscheidungskompetenzen
 {{dataOwner.authority}}
 
-#### Verantwortung
+### 2.1.4 Verantwortung
 {{dataOwner.accountability}}
 
-### 2.2 {{dataSteward.label}}
+## 2.2 {{dataSteward.label}}
 > ⚠️ {{dataSteward.slogan}}
 
-#### Kurzbeschreibung
+### 2.2.1 Kurzbeschreibung
 {{dataSteward.description}}
 
-#### Aufgaben
+### 2.2.2 Aufgaben
 {{dataSteward.responsibility}}
 
-#### Entscheidungskompetenzen
+### 2.2.3 Entscheidungskompetenzen
 {{dataSteward.authority}}
 
-#### Verantwortung
+### 2.2.4 Verantwortung
 {{dataSteward.accountability}}
 
-### 2.1 {{dataCustodian.label}}
+## 2.3 {{dataCustodian.label}}
 > ⚠️ {{dataCustodian.slogan}}
 
-#### Kurzbeschreibung
+### 2.3.1 Kurzbeschreibung
 {{dataCustodian.description}}
 
-#### Aufgaben
+### 2.3.2 Aufgaben
 {{dataCustodian.responsibility}}
 
-#### Entscheidungskompetenzen
+### 2.3.3 Entscheidungskompetenzen
 {{dataCustodian.authority}}
 
-#### Verantwortung
+### 2.3.4 Verantwortung
 {{dataCustodian.accountability}}
 
 
-## 3. Weitere Module
+---
+
+@attach beispiel_mars | Die Grafik zeigt das Kernrollenmodell anhand des Beispiels MARS (Marktdaten Analyse- und Reporting-System).
+
+---
+
+# 3. Weitere Module
 Je nach Komplexität des Prozesses ist es sinnvoll, die drei Kernrollen mit weiteren Rollen zu ergänzen. 
 Die Kernrollen behalten ihre Verantwortung, können aber Aufgaben und Entscheidungen an weitere involvierte Stellen abtreten.
 
-### 3.1 Governance & Steuerung
+## 3.1 Governance & Steuerung
 
-#### 3.1.1 {{gdg.label}}
+### 3.1.1 {{gdg.label}}
 
-#### Kurzbeschreibung
+#### 3.1.1.1 Kurzbeschreibung
 {{gdg.description}}
 
-#### Aufgaben
+#### 3.1.1.2 Aufgaben
 {{gdg.responsibility}}
 
-#### Entscheidungskompetenzen
+#### 3.1.1.3 Entscheidungskompetenzen
 {{gdg.authority}}
 
-#### Verantwortung
+#### 3.1.1.4 Verantwortung
 {{gdg.accountability}}
 
-#### 3.1.2 {{bod.label}}
+### 3.1.2 {{bod.label}}
 {{bod.description}}
 
-### 3.2 {{dataManagementLead.label}}
+## 3.2 {{dataManagementLead.label}}
 
-#### Kurzbeschreibung
+### 3.2.1 Kurzbeschreibung
 {{dataManagementLead.description}}
 
-#### Aufgaben
+### 3.2.2 Aufgaben
 {{dataManagementLead.responsibility}}
 
-#### Entscheidungskompetenzen
+### 3.2.3 Entscheidungskompetenzen
 {{dataManagementLead.authority}}
 
-#### Verantwortung
+### 3.2.4 Verantwortung
 {{dataManagementLead.accountability}}
 
-### 3.3 {{complianceOfficer.label}}
+## 3.3 {{complianceOfficer.label}}
 
-#### Kurzbeschreibung
+### 3.3.1 Kurzbeschreibung
 {{complianceOfficer.description}}
 
-#### Aufgaben
+### 3.3.2 Aufgaben
 {{complianceOfficer.responsibility}}
 
-#### Entscheidungskompetenzen
+### 3.3.3 Entscheidungskompetenzen
 {{complianceOfficer.authority}}
 
-#### Verantwortung
+### 3.3.4 Verantwortung
 {{complianceOfficer.accountability}}
 
-### 3.4 {{informationSecurityOfficer.label}}
+## 3.4 {{informationSecurityOfficer.label}}
 
-#### Kurzbeschreibung
+### 3.4.1 Kurzbeschreibung
 {{informationSecurityOfficer.description}}
 
-#### Aufgaben
+### 3.4.2 Aufgaben
 {{informationSecurityOfficer.responsibility}}
 
-#### Entscheidungskompetenzen
+### 3.4.3 Entscheidungskompetenzen
 {{informationSecurityOfficer.authority}}
 
-#### Verantwortung
+### 3.4.4 Verantwortung
 {{informationSecurityOfficer.accountability}}
-### 3.5 {{dataUser.label}}
 
-#### Kurzbeschreibung
+## 3.5 {{dataUser.label}}
+
+### 3.5.1 Kurzbeschreibung
 {{dataUser.description}}
 
-#### Aufgaben
+### 3.5.2 Aufgaben
 {{dataUser.responsibility}}
 
-#### Entscheidungskompetenzen
+### 3.5.3 Entscheidungskompetenzen
 {{dataUser.authority}}
 
-#### Verantwortung
+### 3.5.4 Verantwortung
 {{dataUser.accountability}}

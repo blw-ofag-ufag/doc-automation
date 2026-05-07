@@ -1,245 +1,649 @@
-# 📚 Documentation Build System
+# Documentation Automation and Confluence Publishing
 
-A lightweight documentation build tool that transforms structured glossary terms into consistent, versioned documentation across Markdown and SVG files.
+A deterministic documentation pipeline that:
 
-It supports:
-- YAML-based terminology management
-- automatic term replacement in docs
-- schema validation
-- incremental builds
-- archive/version history
-- restore and version inspection modes
-- dry-run preview mode
+1. builds Markdown and SVG documentation from structured glossary definitions
+2. synchronizes generated Markdown files to Atlassian Confluence Cloud
+
+The system combines:
+
+- glossary-driven document generation
+- incremental documentation builds
+- semantic content normalization
+- deterministic Confluence synchronization
+- attachment handling
+- conflict detection
+- versioned archive history
 
 ---
 
-# 🧠 Core concept
+# Overview
+
+The repository consists of two connected components:
+
+## 1. Documentation Build System (`doc-automation`)
+
+Builds documentation files from templates using a centralized glossary (`terms.yaml`).
+
+Features:
+
+- YAML-based terminology management
+- automatic placeholder replacement
+- Markdown and SVG processing
+- incremental builds
+- archive/version history
+- dry-run preview mode
+- restore/version inspection
+
+---
+
+## 2. Confluence Sync Engine (`confluence-push`)
+
+Publishes generated Markdown files to Confluence Cloud.
+
+Features:
+
+- deterministic synchronization
+- semantic structural diffing
+- conflict detection
+- attachment synchronization
+- dry-run preview mode
+- overwrite protection
+- normalized HTML comparison
+
+---
+
+# Repository Structure
+
+```text
+.
+├── Makefile
+├── requirements.txt
+├── README.md
+├── LICENSE
+├── confluence.yaml
+├── terms.yaml
+├── .gitignore
+│
+├── src/
+│   ├── doc-automation/
+│   │   └── build_docs.py
+│   │
+│   └── confluence-push/
+│       ├── svg_converter.py
+│       ├── confluence_storage.py
+│       └── yaml_publish.py
+│
+├── res/
+│   └── doc-automation/
+│       ├── add
+│       │   └── *.png
+│       └── input/
+│           ├── *.md
+│           └── *.svg
+│
+├── build/
+│   ├── doc-automation/
+│   │   ├── output/
+│   │   ├── archive/
+│   │   ├── terms.json
+│   │   └── .build_cache.json
+│   │
+│   └── confluence-push/
+│       └── .state.json
+│
+└── .venv/
+```
+
+---
+
+# Core Concept
 
 Instead of writing raw text:
 
-    The customer creates an order.
+```text
+The customer creates an order.
+```
 
 you write structured placeholders:
 
-    The {{term:customer}} creates an {{term:order}}.
+```text
+The {{term:customer}} creates an {{term:order}}.
+```
 
-During build, these placeholders are resolved using a central glossary (`terms.yaml`).
+During the build process, placeholders are resolved using `terms.yaml`.
+
+Generated Markdown files are then synchronized to Confluence.
 
 This ensures:
-- consistent terminology across all docs
-- easy refactoring of domain language
-- single source of truth for definitions
+
+- consistent terminology
+- centralized domain language
+- deterministic publishing
+- reproducible documentation
 
 ---
 
-# 📁 Project structure
+# Installation
 
-    .
-    ├── build_docs.py
-    ├── terms.yaml
-    ├── terms.json
-    ├── docs/
-    │   ├── *.md
-    │   └── *.svg
-    ├── archive/
-    └── .build_cache.json
+## Create environment and install dependencies
+
+```bash
+make install
+```
+
+This automatically:
+
+- creates `.venv`
+- upgrades pip
+- installs all dependencies
 
 ---
 
-# 📦 Glossary format (`terms.yaml`)
+# Build System
 
-The glossary is defined in YAML:
-
-    terms:
-      customer:
-        label: Customer
-        definition: A person or organization that buys products
-
-      order:
-        label: Order
-        definition: A customer request to purchase products
-
-Each term should include:
-
-- label → display name used in documentation
-- description → description of the concept
-
----
-
-# ⚙️ Template syntax
-
-Basic usage:
-```
-    {{term:customer}} → inserts "Customer"
-    {{term:order}} → inserts "Order"
-```
-
-Attribute access:
-
-```
-    {{term:order.definition}} → inserts definition
-    {{term:customer.label}} → inserts label explicitly
-```
-
----
-
-# 🚀 CLI usage
-
-## Build documentation
-```
-    python build_docs.py
-```
-
-Behavior:
-- processes all `.md` and `.svg` files in `docs/`
-- replaces all term placeholders
-- archives files before modification
-- runs incrementally (skips unchanged files)
-- fails on unknown terms (strict mode by default)
-
----
-
-## Dry run mode
-```
-    python build_docs.py --dry-run
-    python build_docs.py -dr
-```
-
-Behavior:
-- shows changes as a diff
-- does NOT modify any files
-- useful for validation and review
-
----
-
-## Force mode
-```
-    python build_docs.py --force
-    python build_docs.py -f
-```
-
-Behavior:
-- allows unknown terms
-- continues build instead of failing
-- replaces missing values with placeholders like:
-  [UNKNOWN:term]
-
----
-
-## Restore latest archived version
-
-```
-    python build_docs.py --restore docs/api/order.md
-    python build_docs.py -r docs/api/order.md
-```
-
-Behavior:
-- restores the most recent archived version
-- overwrites current file
-
----
-
-## List available versions
-
-```
-    python build_docs.py --multi-version-restore docs/api/order.md
-    python build_docs.py -R docs/api/order.md
-```
-    
-Behavior:
-- lists all archived versions
-- shows timestamps
-- does not modify files
-
----
-
-# 📦 Archive system
-
-Before modifying files, backups are stored in:
-
-    `archive/`
+## Glossary Format (`terms.yaml`)
 
 Example:
 
+```yaml
+terms:
+  customer:
+    label: Customer
+    description: A person or organization that buys products
+
+  order:
+    label: Order
+    description: A customer request to purchase products
 ```
-    archive/docs/api/
-      20260410_142301_123456_order.md
-      20260410_150012_654321_order.md
+
+Required fields:
+
+- `label`
+- `description`
+
+---
+
+# Template Syntax
+
+## Basic usage
+
+```text
+{{term:customer}}
+{{term:order}}
 ```
-      
+
+## Attribute access
+
+```text
+{{term:customer.label}}
+{{term:order.description}}
+```
+
+---
+
+# Build Commands
+
+## Build documentation
+
+```bash
+make build
+```
+
+or
+
+```bash
+python ./src/doc-automation/build_docs.py
+```
+
+Behavior:
+
+- processes all `.md` and `.svg` files
+- replaces placeholders
+- archives previous versions
+- skips unchanged files
+- validates glossary structure
+
+---
+
+## Dry run build
+
+```bash
+python ./src/doc-automation/build_docs.py --dry-run
+```
+
+or
+
+```bash
+python ./src/doc-automation/build_docs.py -dr
+```
+
+Behavior:
+
+- previews changes
+- shows diffs
+- performs no file modifications
+
+---
+
+## Force build
+
+```bash
+python ./src/doc-automation/build_docs.py --force
+```
+
+or
+
+```bash
+python ./src/doc-automation/build_docs.py -f
+```
+
+Behavior:
+
+- continues despite unknown terms
+- inserts placeholders for unresolved terms
+
+Example:
+
+```text
+[UNKNOWN:term]
+```
+
+---
+
+## Restore archived version
+
+```bash
+python ./src/doc-automation/build_docs.py --restore docs/file.md
+```
+
+or
+
+```bash
+python ./src/doc-automation/build_docs.py -r docs/file.md
+```
+
+---
+
+## List archived versions
+
+```bash
+python ./src/doc-automation/build_docs.py --multi-version-restore docs/file.md
+```
+
+or
+
+```bash
+python ./src/doc-automation/build_docs.py -R docs/file.md
+```
+
+---
+
+# Archive System
+
+Before modification, files are archived to:
+
+```text
+build/doc-automation/archive/
+```
+
+Example:
+
+```text
+archive/docs/api/
+  20260410_142301_123456_order.md
+  20260410_150012_654321_order.md
+```
+
 Features:
-- preserves folder structure
-- microsecond timestamps
+
+- preserved folder structure
+- timestamped backups
 - full rollback history
 
 ---
 
-# ⚡ Incremental builds
+# Incremental Builds
 
-Only changed files are processed using:
+The build system only processes changed files using:
 
 - file hash comparison
-- cached build state (.build_cache.json)
+- cached build state
 - glossary change detection
 
-This ensures fast builds.
+Cache file:
 
----
-
-# 🛡 Validation system
-
-Before building, the system validates `terms.yaml`.
-
-Required:
-
-- label (string)
-- description (string)
-
-Failures:
-- missing terms root key
-- missing required fields
-- invalid field types
-- unknown terms (unless --force is used)
-
----
-
-# 🧾 Supported formats
-
-- Markdown (.md)
-- SVG (.svg)
-
----
-
-# 🧭 Recommended workflow
-
-```
-
-    # preview changes
-    python build_docs.py -dr
-
-    # build
-    python build_docs.py
-
-    # inspect history
-    python build_docs.py -R docs/file.md
-
-    # restore version
-    python build_docs.py -r docs/file.md
-    
+```text
+build/doc-automation/.build_cache.json
 ```
 
 ---
 
-# 🧠 Design philosophy
+# Confluence Synchronization
 
-- single source of truth (YAML glossary)
-- explicit references (no hidden replacements)
-- safe automation (archive before changes)
-- reproducibility (incremental builds)
-- inspectability (history + dry-run)
+## Environment Variables
+
+Create a `.env` file:
+
+```env
+CONFLUENCE_BASE_URL=https://your-domain.atlassian.net/wiki
+CONFLUENCE_EMAIL=your-email@example.com
+CONFLUENCE_API_TOKEN=your-api-token
+```
 
 ---
 
-# 📌 Summary
+# Confluence YAML Configuration
 
-This tool standardizes terminology across documentation and enables safe, versioned refactoring at scale.
+Example `confluence.yaml`:
+
+```yaml
+pages:
+  - id: "1413054556"
+    file: "build/doc-automation/output/example.md"
+
+    attachments:
+      diagram.svg:
+        path: "./build/doc-automation/output/diagram.svg"
+        caption: "Architecture diagram"
+```
+
+---
+
+# Confluence Commands
+
+## Publish normally
+
+```bash
+make run
+```
+
+or
+
+```bash
+python ./src/confluence-push/yaml_publish.py confluence.yaml
+```
+
+---
+
+## Dry run
+
+```bash
+make dry
+```
+
+or
+
+```bash
+python ./src/confluence-push/yaml_publish.py confluence.yaml --dry-run
+```
+
+---
+
+## Force overwrite
+
+```bash
+make force
+```
+
+or
+
+```bash
+python ./src/confluence-push/yaml_publish.py confluence.yaml --force
+```
+
+---
+
+# Combined Workflow Commands
+
+## Build documentation only
+
+```bash
+make build
+```
+
+Runs:
+
+```bash
+python ./src/doc-automation/build_docs.py
+```
+
+---
+
+## Build and publish
+
+```bash
+make complete
+```
+
+Runs:
+
+1. documentation build
+2. Confluence publish
+
+Equivalent to:
+
+```bash
+make build
+make run
+```
+
+---
+
+## Build and force publish
+
+```bash
+make forcedbuild
+```
+
+Runs:
+
+1. documentation build
+2. forced Confluence overwrite
+
+Equivalent to:
+
+```bash
+make build
+make force
+```
+
+---
+
+# Change Detection
+
+The synchronization engine performs semantic structural comparison.
+
+Pipeline:
+
+```text
+Markdown
+↓
+HTML conversion
+↓
+normalization
+↓
+block extraction
+↓
+remote normalization
+↓
+semantic comparison
+```
+
+Compared block types:
+
+- headings (`h1–h4`)
+- paragraphs (`p`)
+- list items (`li`)
+- table cells (`td`, `th`)
+
+Ignored differences:
+
+- whitespace
+- Confluence editor formatting noise
+- serialization artifacts
+- paragraph/list duplication
+
+---
+
+# Diff Behavior
+
+Dry-run and conflict detection display semantic diffs:
+
+```diff
+--- confluence
++++ local
+```
+
+The system compares normalized structure instead of raw HTML.
+
+---
+
+# Conflict Handling
+
+A conflict occurs when:
+
+- remote normalized content differs from local normalized content
+
+Behavior:
+
+1. warning is displayed
+2. semantic diff is shown
+3. explicit confirmation is required
+
+No silent overwrites occur.
+
+---
+
+# Attachment Handling
+
+Attachments use marker syntax:
+
+```text
+@attach diagram.svg
+```
+
+or
+
+```text
+@attach diagram.svg | Architecture diagram
+```
+
+Features:
+
+- uploaded only when content changes
+- deterministic naming via content hash
+- SVG → PNG conversion
+- attachment reuse when identical
+
+---
+
+# State Handling
+
+Synchronization state is stored locally:
+
+```text
+.confluence-state.json
+```
+
+Example:
+
+```json
+{
+  "1413054556": {
+    "hash": "abcdef123456"
+  }
+}
+```
+
+The system does not rely on Confluence page properties.
+
+---
+
+# Validation Rules
+
+The glossary validator checks:
+
+- required root keys
+- required fields
+- field types
+- unknown references
+
+Strict validation is enabled by default.
+
+---
+
+# Supported Formats
+
+Build system:
+
+- Markdown (`.md`)
+- SVG (`.svg`)
+
+Confluence synchronization:
+
+- Markdown pages
+- image attachments
+
+---
+
+# Architecture
+
+```text
+terms.yaml
+↓
+placeholder resolution
+↓
+Markdown/SVG processing
+↓
+archive creation
+↓
+incremental build
+↓
+generated Markdown
+↓
+Confluence normalization pipeline
+↓
+semantic diff
+↓
+conflict handling
+↓
+Confluence update
+```
+
+---
+
+# Design Philosophy
+
+- local files are the source of truth
+- comparisons must be structural, not textual
+- deterministic output is preferred over formatting preservation
+- automation should be safe and inspectable
+- explicit conflicts are preferred over silent divergence
+
+---
+
+# Future Extensions
+
+Potential future improvements:
+
+- reverse sync (Confluence → Markdown)
+- Git integration
+- CI/CD pipelines
+- multi-user conflict resolution
+- page locking
+- partial page updates
+
+---
+
+# Summary
+
+This repository provides a deterministic documentation pipeline with:
+
+- centralized glossary management
+- automated document generation
+- incremental builds
+- archive/version history
+- semantic Confluence synchronization
+- conflict-safe publishing
+- reproducible documentation output

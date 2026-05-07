@@ -10,9 +10,17 @@ terms:
 
   dataGovernance:
     label: Datengouvernanz
-    description: Die Data Governance stellt sicher, dass Daten als strategische Ressource gesteuert, verantwortet und genutzt können. 
-    mantra1: 👉 Keine Rolle funktioniert isoliert – Data Governance ist Zusammenarbeit.
+    description: Die Datengouvernanz stellt sicher, dass Daten als strategische Ressource gesteuert, verantwortet und genutzt können. 
+    mantra1: 👉 Keine Rolle funktioniert isoliert – Datengouvernanz ist Zusammenarbeit.
     mantra2: 👉 Aufgaben und Kompetenzen können delegiert werden, nicht aber Verantwortung.
+    how: Das Modell nutzt einen minimalen Ansatz mit drei Kernrollen, die gemeinsam den Lebenszyklus der Daten abdecken.
+    purpose:
+      paragraph: Die Geschäftsprozesse werden effizient und digital unterstützt, damit Daten mehrfach genutzt werden können, die gesetzliche Anforderungen jederzeit erfüllt sind, fundierte Entscheidungsgrundlagen vorliegen.
+      list:
+      - Geschäftsprozesse werden effizient und digital unterstützt.
+      - Daten werden mehrfach genutzt (intern & mit anderen Behörden).
+      - Gesetzliche Anforderungen sind jederzeit erfüllt.
+      - Fundierte Entscheidungsgrundlagen liegen Amtsleitung und Politik vor.
 
   validation:
     label: Validierung
@@ -86,7 +94,7 @@ terms:
   dataSteward:
     label: 👩‍💼💡 Datenverwalter (Data Steward)
     perspective: Fachanforderungen sicherstellen.
-    description: Der 👩‍💼💡 Datenverwalter (Data Steward) ist im Fachbereich angesiedelt und stellt sicher, dass Daten verständlich, korrekt und nutzbar sind. Er ist die zentrale Drehscheibe zwischen Fach, IT und Governance.
+    description: Der 👩‍💼💡 Datenverwalter (Data Steward) ist im Fachbereich angesiedelt und stellt sicher, dass Daten verständlich, korrekt und nutzbar sind. Er ist die zentrale Drehscheibe zwischen Fach, IT und Governanz.
     slogan: Der 👩‍💼💡 Datenverwalter (Data Steward) sorgt dafür, dass Daten richtig verstanden und richtig genutzt werden.
     alias_en: Data Steward
     alias_de: 👩‍💼💡 Datenverwalter
@@ -111,7 +119,7 @@ terms:
       - Datenqualität (Accuracy, Completeness, Consistency)
       - Dokumentation & Transparenz
       - Semantische Klarheit (einheitliche Begriffe)
-      - Einhaltung der Governance im Alltag
+      - Einhaltung der Gouvernanz im Alltag
     focus: Qualität, Nutzung & Interpretation.
     expertise: Fachlich
 
@@ -120,37 +128,50 @@ terms:
     label: Gremium Datengouvernanz (GDG) 👥🧭 / ACB
     description: Das Gremium Datengouvernanz (DGD) ist das zentrale, bereichsübergreifende Entscheidungs- und Koordinationsgremium für Datenfragen. Die Mitglieder sind mandatiert und ihre Entscheidungen sind verbindlich.
     responsibility: Entscheidet und koordiniert bei Konflikten zwischen 🧑‍✈️🧭 Dateneigner (Data Owner).
-    authority: Entscheidet bei Konflikten zwischen 🧑‍✈️🧭 Dateneigner (Data Owner) bei der Priorisierung von datenbezogenen Initiativen und Standardisierung und Harmonisierung von Daten.
+    alias_de: Gremium Datengouvernanz (GDG) 👥🧭
+    authority: Entscheidet bei Konflikten zwischen 🧑‍✈️🧭 Dateneigner (Data Owner), bei der Priorisierung von datenbezogenen Initiativen und Standardisierung und Harmonisierung von Daten.
     accountability: Sorgt für eine Abstimmung zwischen Digitalisierungsstrategie BLW und Umsetzung der BLW Datengouvernanz, koordiniert die Umsetzungsinitiativen und löst Konflikte bei der Standardisierung und Harmonisierung von Daten.
+
 
   bod:
     label: Geschäftsleitung
     alias_de: Direktion (GL)
     description: Die Geschäftsleitung ist die oberste Entscheidungsinstanz für strategische und strukturelle Datenkonflikte. Die Geschäftsleitung entscheidet entlang der Organisationsstrategie – nicht entlang bestehender Strukturen.
-
+    expertise: 
+      - Entscheidung bei Grundsatzfragen der Ownership
+      - Löst strategische Zielkonflikte zwischen Bereichen auf.
+      - Schirmherrschaft bei politischen / reputationskritischen Themen.
+    focus: 👉 Entscheidet strategisch / selten / richtungsweisend 
+    perspective: 👉 Die Geschäftsleitung entscheidet entlang der Organisationsstrategie – nicht entlang bestehender Strukturen.
+    responsibility: 
+    - Klärt Ownership-Fragen endgültig
+    - Setzt organisationale Prioritäten
+    - Trifft Entscheidungen bei: 
+      - Zielkonflikten
+      - Ressourcenverteilung
+      - politischer Relevanz
+      
   dataManagementLead:
     label: Data Management Lead 👤🧭
     description: Kompetenzstelle Daten und operative “Geschäftsstelle” für das DGD.
     responsibility: 
-      - Operative Koordination der Data Governance 
+      - Operative Koordination der Datengouvernanz 
       - Vorbereitung von Entscheidungen DGD
       - Tracking der Reifegradentwicklung
     authority: Keine
     accountability: 
       - Meetings vorbereiten und dokumentieren
       - Enabling der 👩‍💼💡 Datenverwalter (Data Stewards)
-    aliases: Data Management Specialist 👤⚙️
-
-
+    aliases: Data Management Specialist 👤🧭
 
   dataArchitect:
-    label: Datenarchitekt 👤⚙️
+    label: Datenarchitekt 👤📐
     description: Data Architect  👤📐 ist für die Festlegung der Richtlinien, Verfahren, Modelle und Technologien verantwortlich, die beim Sammeln, Organisieren, Speichern und Zugreifen auf die BLW-Daten verwendet werden sollen. 
     responsibility: 
     - Definiert Datenmodelle, Standards, Interoperabilität
     - Konzeption und Verwaltung der Dateninfrastruktur eines Unternehmens
     - Entwicklung von Datenrichtlinien und -standards, die auf die Geschäftsziele und technologischen Möglichkeiten abgestimmt sind
-    authority: Entscheidet über die Auswahl geeigneter Datenbanktechnologien, Architekturansätze und Integrationsstrategien, um eine effiziente und skalierbare Datenlandschaft sicherzustellen. Zudem entscheidet er über Standards, Richtlinien und Governance-Strukturen, die den Umgang mit Daten im Unternehmen regeln und langfristig Qualität sowie Sicherheit gewährleisten.
+    authority: Entscheidet über die Auswahl geeigneter Datenbanktechnologien, Architekturansätze und Integrationsstrategien, um eine effiziente und skalierbare Datenlandschaft sicherzustellen. Zudem entscheidet er über Standards, Richtlinien und Gouvernanz-Strukturen, die den Umgang mit Daten im Unternehmen regeln und langfristig Qualität sowie Sicherheit gewährleisten.
     accountability: Plant eine skalierbare und sichere Datenarchitektur, die den Anforderungen des BLW entspricht. Stellt sicher, dass Daten konsistent, verfügbar und qualitativ hochwertig sind sowie den geltenden Datenschutz- und Compliance-Vorgaben entsprechen.
 
   complianceOfficer:
@@ -182,3 +203,13 @@ terms:
     - Spezifische Anforderungen an den  👩‍💼💡 Datenverwalter (Data Steward) melden.
     - Antrag für die Veröffentlichung zusätzlicher Daten gemäss EMBAG sicherstellen.
     accountability: Publikationsrichtlinien (Zitierung!) umsetzen.
+
+  applicationOwner:
+      label: Anwendungsverantwortliche 👤⚙️
+      description: Anwendungsverantwortliche 👤⚙️ übersetzen fachliche Anforderungen in IT-Anforderungen. Sie sind in der Regel bei den Fachorganisationen angesiedelt. 
+      responsibility: 
+      - Übersetzt fachliche Anforderungen in IT-Anforderungen
+      - Sammelt Anforderungen.
+      authority: Priorisiert die benötigten Weiterentwicklungen der Anwendung.
+      accountability: 
+      - Pflegt die Dokumentation

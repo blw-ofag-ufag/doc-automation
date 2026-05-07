@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+config/state.json
+build/doc-automation/archive/
+build/doc-automation/*.json
+build/confluence-push/
+*.png
+*.svg
+*.html
+*.json
+*.jpg
+*.jpeg
+
+.DS_Store
+.vscode/

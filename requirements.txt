@@ -1,0 +1,11 @@
+argparse
+beautifulsoup4
+cairosvg
+datetime
+lxml
+markdown
+Path
+Pillow
+python-dotenv
+PyYAML
+requests

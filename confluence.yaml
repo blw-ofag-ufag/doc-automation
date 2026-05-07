@@ -1,0 +1,66 @@
+pages:
+  - name: TEST - Geschäftsleitung
+    id: 1533739023
+    file: ./build/doc-automation/output/bod.md
+   
+  - name: Datengouvernanz
+    id: 1369636874
+    file: ./build/doc-automation/output/refactoring_datagovernanz.md
+    attachments:
+      datagov_beispiel_mars: 
+        path: ./build/doc-automation/output/datagov_beispiel_mars_banianExtern.svg
+        title: Beispiel MARS
+        caption: Die Grafik zeigt das Kernrollenmodell anhand des Beispiels MARS (Marktdaten Analyse- und Reporting-System).
+      datagov_kernrollen: 
+        path: ./build/doc-automation/output/datagov_kernrollen.svg
+        title: Kernmodell mit drei Rollen
+        caption: Die Grafik zeigt das Kernrollenmodell.
+      datagov_module:
+        path: ./build/doc-automation/output/datagov_module.svg
+        title: Erweitertes Rollenmodell
+        cation: Die Grafik zeigt das Kernmodell erweitert mit mehreren Modulen.
+
+  - name: Zusammenspiel der drei Kernrollen
+    id: 1529577579
+    file: ./build/doc-automation/output/zusammenspiel.md
+    attachments:
+      datagov_kernrollen: 
+        path: ./build/doc-automation/output/datagov_kernrollen.svg
+        title: Kernrollenmodell
+        caption: Die Grafik zeigt, wo die drei Kernrollen angesiedelt sind und wie sie zusammenhängen.
+
+  - name: Kernmodell RACI Matrix
+    id: 1369636905
+    file: ./build/doc-automation/output/raci_kernmodell.md
+    attachments:
+      raci_kernmodell: 
+        path: ./build/doc-automation/output/raci_kernmodell.svg
+        title: RACI der Kernrollen
+        caption: Die Tabelle zeigt die RACI-Matrix für die drei Rollen des Kernmodells.
+
+  - name: Kernrollen - AKV Tabelle
+    id: 1385103362
+    file: ./build/doc-automation/output/akv_kernrolle.md
+
+  - name: Umsetzung Datengouvernanz am Beispiel Datenportal
+    id: 1385627656
+    file: ./build/doc-automation/output/datagov_beispiel_datenportal.md
+    attachments:
+      rollen_datenportal: 
+        path: ./res/doc-automation/add/rollen_datenportal.png
+        title: Darstellung Rollen Datenportal
+        caption: Übernommen aus der Dokumentation des [TP BLW Web Auftritt](https://blw-ofag-ufag.atlassian.net/wiki/spaces/BWA/pages/1155563646/Fragen+an+FBDD+Data+Governance+Pendenzen+Organisationskonzept)
+
+
+  - name: Module RACI Matrix
+    id: 1369636895
+    file: ./build/doc-automation/output/raci_module.md
+
+  - name: Gremium Datengouvernanz (GDG)
+    id: 1369636915
+    file: ./build/doc-automation/output/datagov_gdg.md
+
+  - name: Geschäftsleitung
+    id: 1369636925
+    file: ./build/doc-automation/output/bod.md
+

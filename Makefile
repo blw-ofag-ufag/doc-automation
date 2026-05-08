@@ -1,59 +1,121 @@
-VENV=.venv
-PY=$(VENV)/bin/python
-PIP=$(VENV)/bin/pip
+# =======================================================
+# PORTABLE PYTHON / VENV CONFIG
+# =======================================================
 
-# -------------------------------------------------------
-# VENV SETUP
-# -------------------------------------------------------
+VENV ?= .venv
 
-venv:
-	@test -d $(VENV) || python -m venv $(VENV)
-	$(VENV)/bin/python -m pip install --upgrade pip
+# Prefer python3, fallback to python
+PYTHON ?= $(shell command -v python3 || command -v python)
 
-# -------------------------------------------------------
-# INSTALL
-# -------------------------------------------------------
+# Cross-platform virtualenv paths
+ifeq ($(OS),Windows_NT)
+    PY := $(VENV)/Scripts/python.exe
+    PIP := $(VENV)/Scripts/pip.exe
+else
+    PY := $(VENV)/bin/python
+    PIP := $(VENV)/bin/pip
+endif
 
+# Default target
+.DEFAULT_GOAL := help
+
+# =======================================================
+# PHONY TARGETS
+# =======================================================
+
+.PHONY: help check-python \
+        venv install clean \
+        build rebuild \
+        publish publish-dry publish-force \
+        all all-force
+
+# =======================================================
+# PYTHON / VENV SETUP
+# =======================================================
+
+check-python:
+	@command -v $(PYTHON) >/dev/null 2>&1 || \
+		(echo "ERROR: Python interpreter not found."; exit 1)
+
+venv: check-python
+	@test -d $(VENV) || $(PYTHON) -m venv $(VENV)
+	$(PY) -m pip install --upgrade pip
+
+# Install project dependencies
 install: venv
 	$(PIP) install -r requirements.txt
 
-# -------------------------------------------------------
-# BUILD DOCS
-# -------------------------------------------------------
+# =======================================================
+# CLEANUP
+# =======================================================
 
-build: venv
+clean:
+	rm -rf $(VENV)
+
+# =======================================================
+# BUILD DOCS
+# =======================================================
+
+# Build requires dependencies
+build: install
 	$(PY) ./src/doc-automation/build_docs.py
 
-complete: build run
+# Recreate venv and rebuild docs
+rebuild: clean build
 
-forcedbuild: build force
+# =======================================================
+# CONFLUENCE PUBLISH
+# =======================================================
 
-# -------------------------------------------------------
-# RUN MODES
-# -------------------------------------------------------
-
-run: venv
+publish: install
 	$(PY) src/confluence-push/yaml_publish.py confluence.yaml
 
-dry: venv
-	$(PY) src/confluence-push/yaml_publish.py confluence.yaml --dry-run
+publish-dry: install
+	$(PY) src/confluence-push/yaml_publish.py \
+		confluence.yaml --dry-run
 
-force: venv
-	$(PY) src/confluence-push/yaml_publish.py confluence.yaml --force
+publish-force: install
+	$(PY) src/confluence-push/yaml_publish.py \
+		confluence.yaml --force
 
-# -------------------------------------------------------
+# =======================================================
+# COMBINED WORKFLOWS
+# =======================================================
+
+# Build docs + publish normally
+all: build publish
+
+# Build docs + force publish
+all-force: build publish-force
+
+# =======================================================
 # HELP
-# -------------------------------------------------------
+# =======================================================
 
 help:
+	@echo ""
 	@echo "Available commands:"
 	@echo ""
-	@echo "  make venv        : create virtual environment (.venv)"
-	@echo "  make install     : install dependencies into venv"
-	@echo "  make build       : generate markdown docs"
-	@echo "  make complete    : build docs and publish normally"
-	@echo "  make forcedbuild : build docs and force publish"
-	@echo "  make run         : publish to Confluence (normal run)"
-	@echo "  make dry         : show diff only (no changes applied)"
-	@echo "  make force       : force overwrite Confluence page"
+	@echo "Setup:"
+	@echo "  make venv           Create virtual environment"
+	@echo "  make install        Install dependencies"
+	@echo ""
+	@echo "Build:"
+	@echo "  make build          Generate markdown docs"
+	@echo "  make rebuild        Recreate venv and rebuild docs"
+	@echo ""
+	@echo "Publish:"
+	@echo "  make publish        Publish to Confluence"
+	@echo "  make publish-dry    Dry-run only"
+	@echo "  make publish-force  Force overwrite pages"
+	@echo ""
+	@echo "Workflows:"
+	@echo "  make all            Build docs and publish"
+	@echo "  make all-force      Build docs and force publish"
+	@echo ""
+	@echo "Maintenance:"
+	@echo "  make clean          Remove virtual environment"
+	@echo ""
+	@echo "Overrides:"
+	@echo "  make PYTHON=/path/to/python3 venv"
 	@echo ""

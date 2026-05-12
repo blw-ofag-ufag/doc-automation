@@ -16,6 +16,9 @@ else
     PIP := $(VENV)/bin/pip
 endif
 
+# Allow passing CLI args (IMPORTANT FIX)
+ARGS ?=
+
 # Default target
 .DEFAULT_GOAL := help
 
@@ -51,6 +54,8 @@ install: venv
 
 clean:
 	rm -rf $(VENV)
+	rm -rf build/doc-automation/output
+	rm -f build/doc-automation/.build_cache.json
 
 # =======================================================
 # BUILD DOCS
@@ -58,7 +63,8 @@ clean:
 
 # Build requires dependencies
 build: install
-	$(PY) ./src/doc-automation/build_docs.py
+	@echo "Running build_docs.py $(ARGS)"
+	$(PY) ./src/doc-automation/build_docs.py $(ARGS)
 
 # Recreate venv and rebuild docs
 rebuild: clean build
@@ -86,7 +92,7 @@ publish-force: install
 all: build publish
 
 # Build docs + force publish
-all-force: build publish-force
+all-force: build ARGS="--force" publish-force
 
 # =======================================================
 # HELP
@@ -102,6 +108,7 @@ help:
 	@echo ""
 	@echo "Build:"
 	@echo "  make build          Generate markdown docs"
+	@echo "  make build ARGS=--force   Force rebuild"
 	@echo "  make rebuild        Recreate venv and rebuild docs"
 	@echo ""
 	@echo "Publish:"
@@ -111,11 +118,8 @@ help:
 	@echo ""
 	@echo "Workflows:"
 	@echo "  make all            Build docs and publish"
-	@echo "  make all-force      Build docs and force publish"
+	@echo "  make all-force      Force build + publish"
 	@echo ""
 	@echo "Maintenance:"
-	@echo "  make clean          Remove virtual environment"
-	@echo ""
-	@echo "Overrides:"
-	@echo "  make PYTHON=/path/to/python3 venv"
+	@echo "  make clean          Remove venv + build artifacts"
 	@echo ""

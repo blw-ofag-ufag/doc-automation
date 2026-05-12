@@ -138,6 +138,39 @@ This automatically:
 - upgrades pip
 - installs all dependencies
 
+
+# Makefile Workflows
+
+## Help
+
+```bash
+make help
+```
+
+## Create venv
+
+```bash
+make venv
+```
+
+## Install dependencies
+
+```bash
+make install
+```
+
+## Clean environment
+
+```bash
+    make clean
+```
+
+## Override Python
+
+```bash
+make PYTHON=/usr/bin/python3.11 install
+```
+
 ---
 
 # Build System
@@ -206,6 +239,17 @@ Behavior:
 
 ---
 
+## Rebuild
+
+```bash
+make rebuild
+```
+
+Behavior:
+Recreate venv and rebuild docs.
+
+---
+
 ## Dry run build
 
 ```bash
@@ -227,6 +271,13 @@ Behavior:
 ---
 
 ## Force build
+
+```bash
+make publish-force
+
+```
+
+or
 
 ```bash
 python ./src/doc-automation/build_docs.py --force
@@ -355,7 +406,7 @@ pages:
 ## Publish normally
 
 ```bash
-make run
+make publish
 ```
 
 or
@@ -369,7 +420,7 @@ python ./src/confluence-push/yaml_publish.py confluence.yaml
 ## Dry run
 
 ```bash
-make dry
+make publish-dry
 ```
 
 or
@@ -383,7 +434,7 @@ python ./src/confluence-push/yaml_publish.py confluence.yaml --dry-run
 ## Force overwrite
 
 ```bash
-make force
+make publish-force
 ```
 
 or
@@ -413,7 +464,7 @@ python ./src/doc-automation/build_docs.py
 ## Build and publish
 
 ```bash
-make complete
+make all
 ```
 
 Runs:
@@ -425,7 +476,7 @@ Equivalent to:
 
 ```bash
 make build
-make run
+make publish
 ```
 
 ---
@@ -433,7 +484,7 @@ make run
 ## Build and force publish
 
 ```bash
-make forcedbuild
+make all-force
 ```
 
 Runs:
@@ -445,7 +496,7 @@ Equivalent to:
 
 ```bash
 make build
-make force
+make publish-force
 ```
 
 ---
@@ -543,7 +594,7 @@ Features:
 Synchronization state is stored locally:
 
 ```text
-.confluence-state.json
+build/confluence-push/.state.json
 ```
 
 Example:
@@ -620,19 +671,6 @@ Confluence update
 - deterministic output is preferred over formatting preservation
 - automation should be safe and inspectable
 - explicit conflicts are preferred over silent divergence
-
----
-
-# Future Extensions
-
-Potential future improvements:
-
-- reverse sync (Confluence → Markdown)
-- Git integration
-- CI/CD pipelines
-- multi-user conflict resolution
-- page locking
-- partial page updates
 
 ---
 

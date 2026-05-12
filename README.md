@@ -128,7 +128,7 @@ make install
 
 This automatically:
 
-- creates `.venv`
+- creates `.venv` via `venv`
 - upgrades pip
 - installs all dependencies
 

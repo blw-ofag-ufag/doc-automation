@@ -84,13 +84,7 @@ Features:
 │
 ├── build/
 │   ├── doc-automation/
-│   │   ├── output/
-│   │   ├── archive/
-│   │   ├── terms.json
-│   │   └── .build_cache.json
-│   │
-│   └── confluence-push/
-│       └── .state.json
+│       └── output/
 │
 └── .venv/
 ```

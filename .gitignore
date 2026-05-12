@@ -3,13 +3,11 @@ __pycache__/
 .venv/
 .env
 config/state.json
+build/doc-automation/.build_cache.json
 build/doc-automation/output/
 build/doc-automation/archive/
 build/confluence-push/
 *.html
-*.json
-*.jpg
-*.jpeg
 
 .DS_Store
 .vscode/

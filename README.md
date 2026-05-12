@@ -175,6 +175,14 @@ make PYTHON=/usr/bin/python3.11 install
 
 # Build System
 
+Note1: `make build` automatically runs `install`, which:
+- creates the virtual environment if missing
+- installs dependencies
+- upgrades pip
+
+Note2: all publish commands automatically ensure the virtual environment exists and dependencies are installed.
+
+
 ## Glossary Format (`terms.yaml`)
 
 Example:

@@ -56,37 +56,43 @@ Features:
 # Repository Structure
 
 ```text
+Project structure overview:
+- src/    → core Python modules
+- res/    → input resources (markdown, images, SVGs)
+- build/  → generated output (not versioned)
+```
+
+```text
 .
 ├── Makefile
 ├── requirements.txt
 ├── README.md
 ├── LICENSE
-├── confluence.yaml
-├── terms.yaml
+├── confluence.yaml                  # Confluence publishing configuration
+├── terms.yaml                       # Terminology and mapping definitions
 ├── .gitignore
 │
 ├── src/
-│   ├── doc-automation/
-│   │   └── build_docs.py
+│   ├── doc-automation/              # Documentation generation pipeline
+│   │   └── build_docs.py            # Main script to build documentation from ./res/doc-automtion/input
+│   │                                # as defined in terms.yaml
 │   │
-│   └── confluence-push/
-│       ├── svg_converter.py
-│       ├── confluence_storage.py
-│       └── yaml_publish.py
+│   └── confluence-push/             # Confluence publishing pipeline
+│       ├── svg_converter.py         # Converts .svg to .png
+│       ├── confluence_storage.py    # Handles Confluence formats and storage operations
+│       └── yaml_publish.py          # Publishes content defined in confluence.yaml to Confluence
 │
 ├── res/
-│   └── doc-automation/
-│       ├── add
+│   └── doc-automation/              # Input resources for doc generation
+│       ├── add/                     # Additional assets (images, figures)
 │       │   └── *.png
-│       └── input/
+│       └── input/                   # Source documentation files
 │           ├── *.md
 │           └── *.svg
 │
 ├── build/
-│   ├── doc-automation/
-│       └── output/
-│
-└── .venv/
+│   └── doc-automation/              # Generated build artifacts
+│       └── output/                  # Final rendered documentation output
 ```
 
 ---

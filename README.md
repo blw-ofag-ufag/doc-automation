@@ -64,7 +64,7 @@ Project structure overview:
 
 ```text
 .
-├── Makefile
+├── Makefile                         # run from CLI with `make`
 ├── requirements.txt
 ├── README.md
 ├── LICENSE

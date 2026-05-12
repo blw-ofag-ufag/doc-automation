@@ -102,13 +102,13 @@ Project structure overview:
 Instead of writing raw text:
 
 ```text
-The customer creates an order.
+🧑‍✈️🧭 Dateneigner (Data Owner). Fokus: Verantwortung & Steuerung
 ```
 
 you write structured placeholders:
 
 ```text
-The {{term:customer}} creates an {{term:order}}.
+{{dataOwner.label}}. Fokus: {{dataOwner.focus}}
 ```
 
 During the build process, placeholders are resolved using `terms.yaml`.

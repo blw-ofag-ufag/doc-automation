@@ -6,7 +6,6 @@ config/state.json
 build/doc-automation/.build_cache.json
 build/doc-automation/output/
 build/doc-automation/archive/
-build/confluence-push/
 *.html
 
 .DS_Store

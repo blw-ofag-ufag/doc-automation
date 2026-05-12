@@ -6,8 +6,6 @@ config/state.json
 build/doc-automation/archive/
 build/doc-automation/*.json
 build/confluence-push/
-*.png
-*.svg
 *.html
 *.json
 *.jpg

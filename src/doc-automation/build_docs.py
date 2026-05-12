@@ -13,7 +13,7 @@ import hashlib
 # PATH SETUP
 # ------------------------
 
-BASE_DIR = Path.cwd().resolve()
+BASE_DIR = Path(__file__).resolve().parents[2]
 
 INPUT_YAML = BASE_DIR / "terms.yaml"
 OUTPUT_JSON = BASE_DIR / "./build/doc-automation/terms.json"

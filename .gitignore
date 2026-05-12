@@ -3,6 +3,7 @@ __pycache__/
 .venv/
 .env
 config/state.json
+build/doc-automation/output/
 build/doc-automation/archive/
 build/doc-automation/*.json
 build/confluence-push/

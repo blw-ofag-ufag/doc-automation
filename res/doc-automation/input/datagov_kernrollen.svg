@@ -1,0 +1,70 @@
+<svg width="920" height="600" viewBox="0 0 920 600"
+    xmlns="http://www.w3.org/2000/svg">
+
+    <style>
+.box { stroke:#2c3e50; stroke-width:2; rx:10; }
+.fach-bg { fill:#eaf4fb; }
+.it-bg { fill:#c1d6f5; }
+.business { fill:#f4f6f7 ; }
+.it { fill:#e3edff; }
+.user { fill: #fde6e6 }
+.neutral { fill:#d4e6fb; }
+.plain { fill:none; }
+.gl {fill: #fff9e6; } 
+.title { font:bold 16px sans-serif; fill:#2c3e50; }
+.label { font:italic 12px sans-serif; fill:#555; }
+.arrow { stroke:#2c3e50; stroke-width:2; fill:none; marker-end:url(#arrow); }
+.line { stroke:#2c3e50; stroke-width:2; fill:none; }
+.text { font: 13px sans-serif; fill: #2c3e50; }
+    </style>
+
+    <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" markerUnits="strokeWidth">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+        </marker>
+    </defs>
+
+    <!-- Container Fach -->
+    <rect x="80" y="50" width="360" height="430" class="box fach-bg"/>
+    <text x="100" y="80" class="title">Fach</text>
+
+    <!-- Container IT -->
+    <rect x="480" y="50" width="360" height="430" class="box it-bg"/>
+    <text x="500" y="80" class="title">FBDD</text>
+
+
+
+    <!-- Data Steward -->
+    <rect x="120" y="320" width="300" height="100" class="box business"/>
+    <text x="260" y="350" text-anchor="middle" class="title">{{dataSteward.label}}</text>
+    <text x="260" y="370" text-anchor="middle" class="text">Qualität • Harmonisierung</text>
+    <text x="260" y="390" text-anchor="middle" class="text">Definition</text>
+
+    <!-- Steward → Owner -->
+    <line x1="260" y1="320" x2="260" y2="240" class="arrow"/>
+    <text x="180" y="270" class="label">
+        <tspan x="120" dy="0">Fachliche Probleme</tspan>
+        <tspan x="120" dy="14">fachbereichsintern</tspan>
+    </text>
+
+    <!-- Data Owner -->
+    <rect x="120" y="140" width="300" height="100" class="box business"/>
+    <text x="260" y="170" text-anchor="middle" class="title">{{dataOwner.label}}</text>
+    <text x="260" y="190" text-anchor="middle" class="text">Business Verantwortung</text>
+    <text x="260" y="110" text-anchor="middle" class="text">Fachbereichsübergreifende Probleme</text>
+
+    <!-- Steward → Custodian (90° Knick) -->
+    <line x1="420" y1="370" x2="670" y2="370" class="line"/>
+    <line x1="670" y1="370" x2="670" y2="240" class="arrow"/>
+    <text x="690" y="320" class="label">
+        <tspan x="690" dy="0">Technische Probleme</tspan>
+    </text>
+
+    <!-- Data Custodian -->
+    <rect x="530" y="140" width="300" height="100" class="box it"/>
+    <text x="670" y="170" text-anchor="middle" class="title">{{dataCustodian.label}}</text>
+    <text x="670" y="190" text-anchor="middle" class="text">Technische Umsetzung</text>
+    <text x="670" y="210" text-anchor="middle" class="text">Systeme • Datenhaltung</text>
+
+
+</svg>

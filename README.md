@@ -162,7 +162,7 @@ make install
 ## Clean environment
 
 ```bash
-    make clean
+make clean
 ```
 
 ## Override Python

@@ -189,13 +189,14 @@ Example:
 
 ```yaml
 terms:
-  customer:
-    label: Customer
-    description: A person or organization that buys products
-
-  order:
-    label: Order
-    description: A customer request to purchase products
+  data:
+    label: Daten
+    description: Strukturierte oder unstrukturierte Fakten, Messwerte oder Beobachtungen, die als Grundlage von Entscheidugnen oder Analysen dienen. Grundsätzlich sind drei Arten von Daten (numerische Daten wie  Messwerte, kategoriale Daten wie Beschreibungen und Metadaten (Daten über Daten)) zu unterscheiden.
+    slogan: Daten sind eine strategische Ressource des BLW
+    related:
+      - dataCustodian
+      - dataSteward
+      - dataOwner
 ```
 
 Required fields:

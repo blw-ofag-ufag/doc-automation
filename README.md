@@ -211,15 +211,14 @@ Required fields:
 ## Basic usage
 
 ```text
-{{term:customer}}
-{{term:order}}
+{{term:data}}
 ```
 
 ## Attribute access
 
 ```text
-{{term:customer.label}}
-{{term:order.description}}
+{{term:data.label}}
+{{data.label}}
 ```
 
 ---

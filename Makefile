@@ -16,9 +16,6 @@ else
     PIP := $(VENV)/bin/pip
 endif
 
-# Allow passing CLI args (IMPORTANT FIX)
-ARGS ?=
-
 # Default target
 .DEFAULT_GOAL := help
 
@@ -28,7 +25,7 @@ ARGS ?=
 
 .PHONY: help check-python \
         venv install clean \
-        build rebuild \
+        build build-force rebuild \
         publish publish-dry publish-force \
         all all-force
 
@@ -63,8 +60,13 @@ clean:
 
 # Build requires dependencies
 build: install
-	@echo "Running build_docs.py $(ARGS)"
-	$(PY) ./src/doc-automation/build_docs.py $(ARGS)
+	@echo "Running build_docs.py"
+	$(PY) ./src/doc-automation/build_docs.py
+
+# Force rebuild docs
+build-force: install
+	@echo "Running build_docs.py --force"
+	$(PY) ./src/doc-automation/build_docs.py --force
 
 # Recreate venv and rebuild docs
 rebuild: clean build
@@ -92,7 +94,7 @@ publish-force: install
 all: build publish
 
 # Build docs + force publish
-all-force: build ARGS="--force" publish-force
+all-force: build-force publish-force
 
 # =======================================================
 # HELP
@@ -108,7 +110,7 @@ help:
 	@echo ""
 	@echo "Build:"
 	@echo "  make build          Generate markdown docs"
-	@echo "  make build ARGS=--force   Force rebuild"
+	@echo "  make build-force    Force rebuild"
 	@echo "  make rebuild        Recreate venv and rebuild docs"
 	@echo ""
 	@echo "Publish:"

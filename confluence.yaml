@@ -1,8 +1,14 @@
 pages:
-  - name: TEST - Geschäftsleitung
+  - name: Review-Prozess
     id: 1533739023
-    file: ./build/doc-automation/output/bod.md
-   
+    file: ./build/doc-automation/output/dataGov_review.md
+    attachements:
+      datagov_kernrollen_TEST: 
+        path: ./build/doc-automation/output/datagov_kernrollen.svg
+        title: Kernmodell mit drei Rollen
+        caption: Die Grafik zeigt das Kernrollenmodell.
+
+
   - name: Datengouvernanz
     id: 1369636874
     file: ./build/doc-automation/output/refactoring_datagovernanz.md
@@ -64,3 +70,20 @@ pages:
     id: 1369636925
     file: ./build/doc-automation/output/bod.md
 
+  - name: Entwurf Datengouvernanz Organisation - Kernrollen
+    id: 1381990413
+    file: ./build/doc-automation/output/entwurf_datengouvernanzOrganisation_kernrollen.md
+    attachments:
+      datagov_kernrollen: 
+        path: ./build/doc-automation/output/datagov_kernrollen.svg
+        title: Kernmodell mit drei Rollen
+        caption: Die Grafik zeigt das Kernrollenmodell.
+
+  - name: Anwendungsbeispiel MARS
+    id: 1438842911
+    file: ./build/doc-automation/output/datagov_beispiel_mars.md
+    attachments:
+      datagov_beispiel_mars: 
+        path: ./res/doc-automation/add/Beispiel_Mars_banianExtern.svg
+        title: Kernmodell mit drei Rollen
+        caption: Die Grafik zeigt das Kernrollenmodell.

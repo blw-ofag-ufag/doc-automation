@@ -1,4 +1,5 @@
 # Documentation Automation and Confluence Publishing
+v 1.0
 
 A deterministic documentation pipeline that:
 
